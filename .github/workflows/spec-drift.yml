@@ -1,0 +1,114 @@
+name: Spec drift
+
+# Manual only: rebuild data from the latest ARIA, ARIA in HTML, APG, WCAG and HDS sources and run every suite.
+# Opens (or comments on) an issue labelled "spec-drift" when the data changes or a suite fails. Never
+# blocks merges; update the data with `node scripts/clone-sources.js --latest && pnpm build:data`.
+# Not scheduled: the reference clones are refreshed by hand.
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: spec-drift
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: ember-a11y-mcp
+
+jobs:
+  # Runs the latest, unpinned upstream code, so it gets a read-only token.
+  drift:
+    name: Rebuild and test against latest sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read # checkout only
+    outputs:
+      changed: ${{ steps.data.outputs.changed }}
+      tests: ${{ steps.tests.outcome }}
+      hds: ${{ steps.hds.outcome }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Check out into a subfolder so the source clones sit next to it, as they do locally.
+          path: ember-a11y-mcp
+          persist-credentials: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+        with:
+          package_json_file: ember-a11y-mcp/package.json
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+      - run: node scripts/clone-sources.js --latest
+      - run: pnpm install --frozen-lockfile
+
+      - name: Rebuild data from latest sources
+        id: data
+        run: |
+          pnpm build:data
+          git diff -- data > ../data.diff || true
+          # Datasets whose content changed (ignoring the recorded source commits).
+          changed=$(node -e '
+            const { execFileSync } = require("node:child_process");
+            const fs = require("node:fs");
+            const strip = (s) => { const j = JSON.parse(s); delete j.source; return JSON.stringify(j); };
+            const out = [];
+            for (const f of fs.readdirSync("data").filter((f) => f.endsWith(".json"))) {
+              const before = execFileSync("git", ["show", `HEAD:./data/${f}`], { encoding: "utf8", maxBuffer: 1e9 });
+              if (strip(before) !== strip(fs.readFileSync(`data/${f}`, "utf8"))) out.push(f);
+            }
+            console.log(out.join(" "));')
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+
+      - name: Unit and e2e suites on the rebuilt data
+        id: tests
+        continue-on-error: true
+        run: pnpm test && pnpm test:e2e
+
+      - name: HDS showcase suite on latest HDS
+        id: hds
+        continue-on-error: true
+        run: |
+          (cd ../design-system && pnpm install --frozen-lockfile)
+          (cd ../design-system/showcase && pnpm build:packages)
+          pnpm test:e2e:hds
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: data-diff
+          path: data.diff
+          if-no-files-found: ignore
+
+  report:
+    name: Open or update the spec-drift issue
+    needs: drift
+    if: needs.drift.outputs.changed != '' || needs.drift.outputs.tests == 'failure' || needs.drift.outputs.hds == 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      issues: write # create the label, open or comment on the issue
+    steps:
+      - name: Open or update the spec-drift issue
+        working-directory: .
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          CHANGED: ${{ needs.drift.outputs.changed }}
+          TESTS: ${{ needs.drift.outputs.tests }}
+          HDS: ${{ needs.drift.outputs.hds }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          body="Spec drift check ($RUN_URL)
+
+          - Changed datasets: ${CHANGED:-none}
+          - Unit and e2e suites on latest data: $TESTS
+          - HDS showcase suite on latest HDS: $HDS
+
+          The data diff is attached to the run as the \`data-diff\` artifact. To update: \`node scripts/clone-sources.js --latest && pnpm build:data\`, review, then commit."
+          gh label create spec-drift --color FBCA04 --description "Upstream spec or HDS changes" --force
+          issue=$(gh issue list --label spec-drift --state open --json number --jq '.[0].number')
+          if [ -n "$issue" ]; then gh issue comment "$issue" --body "$body"; else gh issue create --title "Upstream spec drift detected" --label spec-drift --body "$body"; fi

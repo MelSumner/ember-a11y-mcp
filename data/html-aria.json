@@ -1,0 +1,4189 @@
+{
+  "source": {
+    "name": "ARIA in HTML",
+    "url": "https://www.w3.org/TR/html-aria/",
+    "repo": "https://github.com/w3c/html-aria.git",
+    "commit": "9fd6a745b6be74dc17d24197ba3cf9c056f12e81",
+    "license": "W3C Software and Document License",
+    "licenseUrl": "https://www.w3.org/copyright/software-license-2023/",
+    "note": "Allowances derived from the normative table; `match` conditions are hand-curated by ember-a11y-mcp."
+  },
+  "knownInputTypes": [
+    "button",
+    "checkbox",
+    "color",
+    "date",
+    "datetime-local",
+    "email",
+    "file",
+    "hidden",
+    "image",
+    "month",
+    "number",
+    "password",
+    "radio",
+    "range",
+    "reset",
+    "search",
+    "submit",
+    "tel",
+    "text",
+    "time",
+    "url",
+    "week"
+  ],
+  "elements": [
+    {
+      "id": "el-a",
+      "element": "a with href",
+      "match": {
+        "tags": [
+          "a"
+        ],
+        "attrs": {
+          "href": true
+        }
+      },
+      "implicitRole": "link",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=link",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "button",
+        "checkbox",
+        "menuitem",
+        "menuitemcheckbox",
+        "menuitemradio",
+        "option",
+        "radio",
+        "switch",
+        "tab",
+        "treeitem",
+        "doc-backlink",
+        "doc-biblioref",
+        "doc-glossref",
+        "doc-noteref"
+      ],
+      "notRecommendedRoles": [
+        "link"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "should-not",
+          "attributes": [
+            {
+              "name": "aria-disabled",
+              "value": "true"
+            }
+          ],
+          "text": "It is NOT RECOMMENDED to use `aria-disabled=\"true\"` on an `a` element with an `href` attribute."
+        }
+      ],
+      "text": "Roles: `button`, `checkbox`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `switch`, `tab` or `treeitem`. (link is also allowed, but NOT RECOMMENDED.) DPub Roles: `doc-backlink`, `doc-biblioref`, `doc-glossref` or `doc-noteref` Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. It is NOT RECOMMENDED to use `aria-disabled=\"true\"` on an `a` element with an `href` attribute. If a link needs to be programmatically communicated as \"disabled\", remove the `href` attribute.",
+      "url": "https://www.w3.org/TR/html-aria/#el-a"
+    },
+    {
+      "id": "el-a-no-href",
+      "element": "a without href",
+      "match": {
+        "tags": [
+          "a"
+        ],
+        "attrs": {
+          "href": false
+        }
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-a-no-href"
+    },
+    {
+      "id": "el-abbr",
+      "element": "abbr",
+      "match": {
+        "tags": [
+          "abbr"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role` Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-abbr"
+    },
+    {
+      "id": "el-address",
+      "element": "address",
+      "match": {
+        "tags": [
+          "address"
+        ]
+      },
+      "implicitRole": "group",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=group",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "group"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `group` is NOT RECOMMENDED. Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-address"
+    },
+    {
+      "id": "el-area",
+      "element": "area with href",
+      "match": {
+        "tags": [
+          "area"
+        ],
+        "attrs": {
+          "href": true
+        }
+      },
+      "implicitRole": "link",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=link",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "link"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "link"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than link, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `link` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-area"
+    },
+    {
+      "id": "el-area-no-href",
+      "element": "area without href",
+      "match": {
+        "tags": [
+          "area"
+        ],
+        "attrs": {
+          "href": false
+        }
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "button",
+        "link"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `button` or `link`. (generic is also allowed, but SHOULD NOT be used.) Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-area-no-href"
+    },
+    {
+      "id": "el-article",
+      "element": "article",
+      "match": {
+        "tags": [
+          "article"
+        ]
+      },
+      "implicitRole": "article",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=article",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "application",
+        "document",
+        "feed",
+        "main",
+        "none",
+        "presentation",
+        "region"
+      ],
+      "notRecommendedRoles": [
+        "article"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `application`, `document`, `feed`, `main`, `none`, `presentation` or `region`. (article is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-article"
+    },
+    {
+      "id": "el-aside",
+      "element": "aside",
+      "match": {
+        "tags": [
+          "aside"
+        ]
+      },
+      "implicitRole": "complementary",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=complementary",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "feed",
+        "none",
+        "note",
+        "presentation",
+        "region",
+        "search",
+        "doc-dedication",
+        "doc-example",
+        "doc-footnote",
+        "doc-glossary",
+        "doc-pullquote",
+        "doc-tip"
+      ],
+      "notRecommendedRoles": [
+        "complementary"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `feed`, `none`, `note`, `presentation`, `region` or `search`. (complementary is also allowed, but NOT RECOMMENDED.) DPub Roles: `doc-dedication`, `doc-example`, `doc-footnote`, `doc-glossary`, `doc-pullquote` or `doc-tip` Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-aside"
+    },
+    {
+      "id": "el-audio",
+      "element": "audio",
+      "match": {
+        "tags": [
+          "audio"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "application"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "application"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Role: `application` Global `aria-*` attributes and any `aria-*` attributes applicable to the `application` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-audio"
+    },
+    {
+      "id": "el-autonomous-custom-element",
+      "element": "autonomous custom element",
+      "match": {
+        "customElement": true
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "Role exposed from author defined {{ElementInternals}} Otherwise role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "If role defined by `ElementInternals`, no `role` Otherwise, any `role`, though generic SHOULD NOT be used. Naming Prohibited if exposed as the `generic` role, or if exposed as another role which prohibits naming. Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-autonomous-custom-element"
+    },
+    {
+      "id": "el-b",
+      "element": "b",
+      "match": {
+        "tags": [
+          "b"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-b"
+    },
+    {
+      "id": "el-base",
+      "element": "base",
+      "match": {
+        "tags": [
+          "base"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-base"
+    },
+    {
+      "id": "el-bdi",
+      "element": "bdi",
+      "match": {
+        "tags": [
+          "bdi"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-bdi"
+    },
+    {
+      "id": "el-bdo",
+      "element": "bdo",
+      "match": {
+        "tags": [
+          "bdo"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-bdo"
+    },
+    {
+      "id": "el-blockquote",
+      "element": "blockquote",
+      "match": {
+        "tags": [
+          "blockquote"
+        ]
+      },
+      "implicitRole": "blockquote",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`blockquote`",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "blockquote"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `blockquote` is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-blockquote"
+    },
+    {
+      "id": "el-body",
+      "element": "body",
+      "match": {
+        "tags": [
+          "body"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "must-not",
+          "attributes": [
+            {
+              "name": "aria-hidden",
+              "value": "true"
+            }
+          ],
+          "text": "Naming Prohibited Otherwise, global `aria-*` attributes allowed for the `generic` role, with the exception that authors MUST NOT specify `aria-hidden=true` on the `body` element."
+        }
+      ],
+      "text": "No `role` other than generic, which SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes allowed for the `generic` role, with the exception that authors MUST NOT specify `aria-hidden=true` on the `body` element.",
+      "url": "https://www.w3.org/TR/html-aria/#el-body"
+    },
+    {
+      "id": "el-br",
+      "element": "br",
+      "match": {
+        "tags": [
+          "br"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "none",
+        "presentation"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "hidden-only",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `none` or `presentation` Authors MAY specify the `aria-hidden` attribute on the `br` element. Otherwise, no other allowed `aria-*` attributes.",
+      "url": "https://www.w3.org/TR/html-aria/#el-br"
+    },
+    {
+      "id": "el-button",
+      "element": "button",
+      "match": {
+        "tags": [
+          "button"
+        ],
+        "context": "inert with no role/aria-* when it is the first child of select"
+      },
+      "implicitRole": "button",
+      "implicitRoleAlternatives": [
+        "select",
+        "inert"
+      ],
+      "implicitText": "role=button If the `button` is the first child of a `select` element, the element is `inert`.",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "checkbox",
+        "combobox",
+        "gridcell",
+        "link",
+        "menuitem",
+        "menuitemcheckbox",
+        "menuitemradio",
+        "option",
+        "radio",
+        "separator",
+        "slider",
+        "switch",
+        "tab",
+        "treeitem"
+      ],
+      "notRecommendedRoles": [
+        "button"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `checkbox`, `combobox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `separator`, `slider`, `switch`, `tab`, or `treeitem`. (button is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. If the `button` is the first child of a `select` element: No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-button"
+    },
+    {
+      "id": "el-canvas",
+      "element": "canvas",
+      "match": {
+        "tags": [
+          "canvas"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role` Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-canvas"
+    },
+    {
+      "id": "el-caption",
+      "element": "caption",
+      "match": {
+        "tags": [
+          "caption"
+        ]
+      },
+      "implicitRole": "caption",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`caption`",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "caption"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than `caption`, which is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes.",
+      "url": "https://www.w3.org/TR/html-aria/#el-caption"
+    },
+    {
+      "id": "el-cite",
+      "element": "cite",
+      "match": {
+        "tags": [
+          "cite"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role` Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-cite"
+    },
+    {
+      "id": "el-code",
+      "element": "code",
+      "match": {
+        "tags": [
+          "code"
+        ]
+      },
+      "implicitRole": "code",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`code`",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "code"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `code` is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-code"
+    },
+    {
+      "id": "el-col",
+      "element": "col",
+      "match": {
+        "tags": [
+          "col"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-col"
+    },
+    {
+      "id": "el-colgroup",
+      "element": "colgroup",
+      "match": {
+        "tags": [
+          "colgroup"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-colgroup"
+    },
+    {
+      "id": "el-data",
+      "element": "data",
+      "match": {
+        "tags": [
+          "data"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-data"
+    },
+    {
+      "id": "el-datalist",
+      "element": "datalist",
+      "match": {
+        "tags": [
+          "datalist"
+        ]
+      },
+      "implicitRole": "listbox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=listbox",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "listbox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than listbox, which is NOT RECOMMENDED. No `aria-*` attributes.",
+      "url": "https://www.w3.org/TR/html-aria/#el-datalist"
+    },
+    {
+      "id": "el-dd",
+      "element": "dd",
+      "match": {
+        "tags": [
+          "dd"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "definition"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` Global `aria-*` attributes and any `aria-*` attributes applicable to the `definition` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-dd"
+    },
+    {
+      "id": "el-del",
+      "element": "del",
+      "match": {
+        "tags": [
+          "del"
+        ]
+      },
+      "implicitRole": "deletion",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`deletion`",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "deletion"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `deletion` is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-del"
+    },
+    {
+      "id": "el-details",
+      "element": "details",
+      "match": {
+        "tags": [
+          "details"
+        ]
+      },
+      "implicitRole": "group",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=group",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "group"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "group"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than group, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `group` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-details"
+    },
+    {
+      "id": "el-dfn",
+      "element": "dfn",
+      "match": {
+        "tags": [
+          "dfn"
+        ]
+      },
+      "implicitRole": "term",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=term",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "term"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though term is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-dfn"
+    },
+    {
+      "id": "el-dialog",
+      "element": "dialog",
+      "match": {
+        "tags": [
+          "dialog"
+        ]
+      },
+      "implicitRole": "dialog",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=dialog",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "alertdialog"
+      ],
+      "notRecommendedRoles": [
+        "dialog"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "dialog"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Role: `alertdialog`. (dialog is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the `dialog` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-dialog"
+    },
+    {
+      "id": "el-div",
+      "element": "div",
+      "match": {
+        "tags": [
+          "div"
+        ],
+        "context": "only presentation/none when a direct child of dl"
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "If a direct child of a [^dl^] element, only `presentation` or `none`. Otherwise, any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "contextFallbackPolicy": "any",
+      "notes": [
+        "As a direct child of dl only presentation/none are allowed."
+      ],
+      "url": "https://www.w3.org/TR/html-aria/#el-div"
+    },
+    {
+      "id": "el-dl",
+      "element": "dl",
+      "match": {
+        "tags": [
+          "dl"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "group",
+        "list",
+        "none",
+        "presentation"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `group`, `list`, `none` or `presentation` Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-dl"
+    },
+    {
+      "id": "el-dt",
+      "element": "dt",
+      "match": {
+        "tags": [
+          "dt"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "listitem"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Role: `listitem` Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-dt"
+    },
+    {
+      "id": "el-em",
+      "element": "em",
+      "match": {
+        "tags": [
+          "em"
+        ]
+      },
+      "implicitRole": "emphasis",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`emphasis`",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "emphasis"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `emphasis` is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-em"
+    },
+    {
+      "id": "el-embed",
+      "element": "embed",
+      "match": {
+        "tags": [
+          "embed"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "application",
+        "document",
+        "img",
+        "none",
+        "presentation"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `application`, `document`, `img`, `image`, `none` or `presentation`. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-embed"
+    },
+    {
+      "id": "el-fieldset",
+      "element": "fieldset",
+      "match": {
+        "tags": [
+          "fieldset"
+        ]
+      },
+      "implicitRole": "group",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=group",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "none",
+        "presentation",
+        "radiogroup"
+      ],
+      "notRecommendedRoles": [
+        "group"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `none`, `presentation` or `radiogroup`. (group is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-fieldset"
+    },
+    {
+      "id": "el-figcaption",
+      "element": "figcaption",
+      "match": {
+        "tags": [
+          "figcaption"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "group",
+        "none",
+        "presentation"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `group`, `none` or `presentation` Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-figcaption"
+    },
+    {
+      "id": "el-figure",
+      "element": "figure",
+      "match": {
+        "tags": [
+          "figure"
+        ],
+        "context": "depends on whether it has a figcaption"
+      },
+      "implicitRole": "figure",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=figure",
+      "rolePolicy": "any",
+      "allowedRoles": [
+        "doc-example"
+      ],
+      "notRecommendedRoles": [
+        "figure"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "If the `figure` has a valid `figcaption` descendant: No `role` other than figure, which is NOT RECOMMENDED. DPub Role: `doc-example`. Otherwise, if the `figure` has no `figcaption` descendant: Any `role`, though figure is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "contextFallbackPolicy": "any",
+      "notes": [
+        "With a figcaption descendant only figure (NOT RECOMMENDED) or doc-example are allowed."
+      ],
+      "url": "https://www.w3.org/TR/html-aria/#el-figure"
+    },
+    {
+      "id": "el-footer",
+      "element": "footer",
+      "match": {
+        "tags": [
+          "footer"
+        ],
+        "context": "contentinfo only when not scoped to article/aside/main/nav/section"
+      },
+      "implicitRole": "contentinfo",
+      "implicitRoleAlternatives": [
+        "generic"
+      ],
+      "implicitText": "If not a descendant of an `article`, `aside`, `main`, `nav` or `section` element, or an element with `role=article`, `complementary`, `main`, `navigation` or `region` then role=contentinfo Otherwise, role=generic",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "group",
+        "none",
+        "presentation",
+        "doc-footnote"
+      ],
+      "notRecommendedRoles": [
+        "contentinfo"
+      ],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `group`, `presentation` or `none`. (If not a descendant of an `article`, `aside`, `main`, `nav` or `section` element, or an element with `role=article`, `complementary`, `main`, `navigation` or `region`, then role=contentinfo is also allowed, but NOT RECOMMENDED. Otherwise, role=generic is also allowed, but SHOULD NOT be used.) DPub Role: `doc-footnote` Naming Prohibited if exposed as `generic`. Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "namingProhibitedWhen": "exposed as generic (scoped to article/aside/main/nav/section)",
+      "url": "https://www.w3.org/TR/html-aria/#el-footer"
+    },
+    {
+      "id": "el-form",
+      "element": "form",
+      "match": {
+        "tags": [
+          "form"
+        ]
+      },
+      "implicitRole": "form",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=form",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "none",
+        "presentation",
+        "search"
+      ],
+      "notRecommendedRoles": [
+        "form"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `none`, `presentation` or `search`. (form is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. A `form` is not exposed as a landmark region unless it has been provided an accessible name.",
+      "url": "https://www.w3.org/TR/html-aria/#el-form"
+    },
+    {
+      "id": "el-form-associated-custom-element",
+      "element": "form-associated custom element",
+      "match": {
+        "customElement": true,
+        "context": "form-associated custom element"
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "Role exposed from author defined {{ElementInternals}} Otherwise role=generic",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "button",
+        "checkbox",
+        "combobox",
+        "listbox",
+        "progressbar",
+        "group",
+        "radio",
+        "radiogroup",
+        "searchbox",
+        "slider",
+        "spinbutton",
+        "switch",
+        "textbox"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "If role defined by `ElementInternals`, no `role` Otherwise, form-related roles: `button`, `checkbox`, `combobox`, `listbox`, `progressbar`, `group`, `radio`, `radiogroup`, `searchbox`, `slider`, `spinbutton`, `switch` or `textbox`. (generic is also allowed, but SHOULD NOT be used.) Naming Prohibited if exposed as the `generic` role. Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-form-associated-custom-element"
+    },
+    {
+      "id": "el-h1-h6",
+      "element": "h1 to h6",
+      "match": {
+        "tags": [
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6"
+        ]
+      },
+      "implicitRole": "heading",
+      "implicitRoleAlternatives": [
+        "aria-level"
+      ],
+      "implicitText": "role=heading, `aria-level` = the number in the element's tag name",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "none",
+        "presentation",
+        "tab",
+        "doc-subtitle"
+      ],
+      "notRecommendedRoles": [
+        "heading"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `none`, `presentation` or `tab`. (heading is also allowed, but NOT RECOMMENDED.) DPub Role: `doc-subtitle` Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "implicitValues": {
+        "aria-level": "from tag name"
+      },
+      "url": "https://www.w3.org/TR/html-aria/#el-h1-h6"
+    },
+    {
+      "id": "el-head",
+      "element": "head",
+      "match": {
+        "tags": [
+          "head"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-head"
+    },
+    {
+      "id": "el-header",
+      "element": "header",
+      "match": {
+        "tags": [
+          "header"
+        ],
+        "context": "banner only when not scoped to article/aside/main/nav/section"
+      },
+      "implicitRole": "banner",
+      "implicitRoleAlternatives": [
+        "generic"
+      ],
+      "implicitText": "If not a descendant of an `article`, `aside`, `main`, `nav` or `section` element, or an element with `role=article`, `complementary`, `main`, `navigation` or `region` then role=banner Otherwise, role=generic",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "group",
+        "none",
+        "presentation"
+      ],
+      "notRecommendedRoles": [
+        "banner"
+      ],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `group`, `none` or `presentation`. (If not a descendant of an `article`, `aside`, `main`, `nav` or `section` element, or an element with `role=article`, `complementary`, `main`, `navigation` or `region`, then role=banner is also allowed, but NOT RECOMMENDED. Otherwise, role=generic is also allowed, but SHOULD NOT be used.) Naming Prohibited if exposed as `generic`. Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "namingProhibitedWhen": "exposed as generic (scoped to article/aside/main/nav/section)",
+      "url": "https://www.w3.org/TR/html-aria/#el-header"
+    },
+    {
+      "id": "el-hgroup",
+      "element": "hgroup",
+      "match": {
+        "tags": [
+          "hgroup"
+        ]
+      },
+      "implicitRole": "group",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=group",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "group"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `group` is NOT RECOMMENDED. Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-hgroup"
+    },
+    {
+      "id": "el-hr",
+      "element": "hr",
+      "match": {
+        "tags": [
+          "hr"
+        ]
+      },
+      "implicitRole": "separator",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=separator",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "none",
+        "presentation",
+        "doc-pagebreak"
+      ],
+      "notRecommendedRoles": [
+        "separator"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "separator"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `none` or `presentation`. (separator is also allowed, but NOT RECOMMENDED.) DPub Role: `doc-pagebreak` Global `aria-*` attributes and any `aria-*` attributes applicable to the `separator` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-hr"
+    },
+    {
+      "id": "el-html",
+      "element": "html",
+      "match": {
+        "tags": [
+          "html"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "document",
+        "generic"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than document or generic, which are NOT RECOMMENDED. No `aria-*` attributes.",
+      "url": "https://www.w3.org/TR/html-aria/#el-html"
+    },
+    {
+      "id": "el-i",
+      "element": "i",
+      "match": {
+        "tags": [
+          "i"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-i"
+    },
+    {
+      "id": "el-iframe",
+      "element": "iframe",
+      "match": {
+        "tags": [
+          "iframe"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "application",
+        "document",
+        "img",
+        "none",
+        "presentation"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `application`, `document`, `img`, `image`, `none` or `presentation`. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-iframe"
+    },
+    {
+      "id": "el-img",
+      "element": "img",
+      "match": {
+        "tags": [
+          "img"
+        ],
+        "context": "img has non-empty alt or another accessible name (or no alt attribute)"
+      },
+      "implicitRole": "img",
+      "implicitRoleAlternatives": [],
+      "implicitText": "If the `img` has non-empty [^img/alt^] (`alt=\"some text\"`) or an accessible name is provided by another `img` naming method, or the `img` has no `alt` and no accessible name: role=img or image",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "button",
+        "checkbox",
+        "link",
+        "math",
+        "menuitem",
+        "menuitemcheckbox",
+        "menuitemradio",
+        "meter",
+        "option",
+        "progressbar",
+        "radio",
+        "scrollbar",
+        "separator",
+        "slider",
+        "switch",
+        "tab",
+        "treeitem",
+        "doc-cover"
+      ],
+      "notRecommendedRoles": [
+        "img",
+        "image"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `button`, `checkbox`, `link`, `math`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `meter`, `option`, `progressbar`, `radio`, `scrollbar`, `separator`, `slider`, `switch`, `tab` or `treeitem`. (img or image is also allowed, but NOT RECOMMENDED.) DPub Role: `doc-cover` Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. If the `img` has no `alt` attribute or no accessible name: No `role` other than the role=none or presentation roles. (role=img or image is also allowed, but NOT RECOMMENDED.)",
+      "url": "https://www.w3.org/TR/html-aria/#el-img"
+    },
+    {
+      "id": "el-img-no-name",
+      "element": "img with empty alt and no accessible name",
+      "match": {
+        "tags": [
+          "img"
+        ],
+        "attrs": {
+          "alt": "empty"
+        },
+        "context": "img with alt=\"\" and no other accessible name"
+      },
+      "implicitRole": "presentation",
+      "implicitRoleAlternatives": [
+        "none"
+      ],
+      "implicitText": "If the `img` has an empty `alt` ([^img/alt^]`=\"\"`) and lacks any other `img` naming methods: role=none, role=presentation",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "none",
+        "presentation"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "hidden-only",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than the role=none or presentation roles, which are NOT RECOMMENDED. No `aria-*` attributes except `aria-hidden=\"true\"`.",
+      "url": "https://www.w3.org/TR/html-aria/#el-img-no-name"
+    },
+    {
+      "id": "el-input-button",
+      "element": "input type=button",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "button"
+        ]
+      },
+      "implicitRole": "button",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=button",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "checkbox",
+        "combobox",
+        "gridcell",
+        "link",
+        "menuitem",
+        "menuitemcheckbox",
+        "menuitemradio",
+        "option",
+        "radio",
+        "separator",
+        "slider",
+        "switch",
+        "tab",
+        "treeitem"
+      ],
+      "notRecommendedRoles": [
+        "button"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `checkbox`, `combobox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `separator`, `slider`, `switch`, `tab`, or `treeitem`. (button is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-button"
+    },
+    {
+      "id": "el-input-checkbox",
+      "element": "input type=checkbox",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "checkbox"
+        ]
+      },
+      "implicitRole": "checkbox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=checkbox",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "menuitemcheckbox",
+        "option",
+        "switch",
+        "button"
+      ],
+      "notRecommendedRoles": [
+        "checkbox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "must-not",
+          "attributes": [
+            {
+              "name": "aria-checked",
+              "value": null
+            }
+          ],
+          "text": "(checkbox is also allowed, but NOT RECOMMENDED.) Authors MUST NOT use the `aria-checked` attribute on `input type=checkbox` elements."
+        }
+      ],
+      "text": "Roles: `menuitemcheckbox`, `option` or `switch`; `button` if used with `aria-pressed`. (checkbox is also allowed, but NOT RECOMMENDED.) Authors MUST NOT use the `aria-checked` attribute on `input type=checkbox` elements. Otherwise, any Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. The HTML [^input/checked^] attribute can be used instead of the `aria-checked` attribute for `menuitemcheckbox`, `option` or `switch` roles when used on `type=checkbox`.",
+      "notes": [
+        "button is only allowed together with aria-pressed."
+      ],
+      "url": "https://www.w3.org/TR/html-aria/#el-input-checkbox"
+    },
+    {
+      "id": "el-input-color",
+      "element": "input type=color",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "color"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [
+        "aria-disabled"
+      ],
+      "attributeRules": [],
+      "text": "No `role` Global `aria-*` attributes and `aria-disabled` attribute.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-color"
+    },
+    {
+      "id": "el-input-date",
+      "element": "input type=date",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "date"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "textbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` Global `aria-*` attributes and any `aria-*` attributes applicable to the `textbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-date"
+    },
+    {
+      "id": "el-input-datetime-local",
+      "element": "input type=datetime-local",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "datetime-local"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "textbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` Global `aria-*` attributes and any `aria-*` attributes applicable to the `textbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-datetime-local"
+    },
+    {
+      "id": "el-input-email",
+      "element": "input type=email with no list attribute",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "email"
+        ],
+        "attrs": {
+          "list": false
+        }
+      },
+      "implicitRole": "textbox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=textbox",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "textbox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "textbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than textbox, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `textbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-email"
+    },
+    {
+      "id": "el-input-file",
+      "element": "input type=file",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "file"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [
+        "aria-disabled",
+        "aria-invalid",
+        "aria-required"
+      ],
+      "attributeRules": [],
+      "text": "No `role` Global `aria-*` attributes, `aria-disabled`, `aria-invalid` and `aria-required` attributes.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-file"
+    },
+    {
+      "id": "el-input-hidden",
+      "element": "input type=hidden",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "hidden"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-hidden"
+    },
+    {
+      "id": "el-input-image",
+      "element": "input type=image",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "image"
+        ]
+      },
+      "implicitRole": "button",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=button",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "button",
+        "checkbox",
+        "gridcell",
+        "link",
+        "menuitem",
+        "menuitemcheckbox",
+        "menuitemradio",
+        "option",
+        "radio",
+        "separator",
+        "slider",
+        "switch",
+        "tab",
+        "treeitem"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "The following roles are allowed, but are NOT RECOMMENDED: `button`, `checkbox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `separator`, `slider`, `switch`, `tab` or `treeitem`. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. If possible, authors SHOULD consider using a different HTML element which allows the specified role, such as the `button` element.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-image"
+    },
+    {
+      "id": "el-input-month",
+      "element": "input type=month",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "month"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "textbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` Global `aria-*` attributes and any `aria-*` attributes applicable to the `textbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-month"
+    },
+    {
+      "id": "el-input-number",
+      "element": "input type=number",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "number"
+        ]
+      },
+      "implicitRole": "spinbutton",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=spinbutton",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "spinbutton"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "spinbutton"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than spinbutton, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `spinbutton` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-number"
+    },
+    {
+      "id": "el-input-password",
+      "element": "input type=password",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "password"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "textbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` Global `aria-*` attributes and any `aria-*` attributes applicable to the `textbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-password"
+    },
+    {
+      "id": "el-input-radio",
+      "element": "input type=radio",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "radio"
+        ]
+      },
+      "implicitRole": "radio",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=radio",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "menuitemradio"
+      ],
+      "notRecommendedRoles": [
+        "radio"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "must-not",
+          "attributes": [
+            {
+              "name": "aria-checked",
+              "value": null
+            }
+          ],
+          "text": "(radio is also allowed, but NOT RECOMMENDED.) Authors MUST NOT use the `aria-checked` attribute on `input type=radio` elements."
+        }
+      ],
+      "text": "Role: `menuitemradio`. (radio is also allowed, but NOT RECOMMENDED.) Authors MUST NOT use the `aria-checked` attribute on `input type=radio` elements. Otherwise, any global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. The HTML [^input/checked^] attribute can be used instead of the `aria-checked` attribute for the `menuitemradio` role when used on `type=radio`.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-radio"
+    },
+    {
+      "id": "el-input-range",
+      "element": "input type=range",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "range"
+        ]
+      },
+      "implicitRole": "slider",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=slider",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "slider"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "slider"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "should-not",
+          "attributes": [
+            {
+              "name": "aria-valuemax",
+              "value": null
+            },
+            {
+              "name": "aria-valuemin",
+              "value": null
+            }
+          ],
+          "text": "Authors SHOULD NOT use the `aria-valuemax` or `aria-valuemin` attributes on `input type=range`."
+        }
+      ],
+      "text": "No `role` other than slider, which is NOT RECOMMENDED. Authors SHOULD NOT use the `aria-valuemax` or `aria-valuemin` attributes on `input type=range`. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes applicable to the `slider` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-range"
+    },
+    {
+      "id": "el-input-reset",
+      "element": "input type=reset",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "reset"
+        ]
+      },
+      "implicitRole": "button",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=button",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "button",
+        "checkbox",
+        "combobox",
+        "gridcell",
+        "link",
+        "menuitem",
+        "menuitemcheckbox",
+        "menuitemradio",
+        "option",
+        "radio",
+        "separator",
+        "slider",
+        "switch",
+        "tab",
+        "treeitem"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "The following roles are allowed, but are NOT RECOMMENDED: `button`, `checkbox`, `combobox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `separator`, `slider`, `switch`, `tab` or `treeitem`. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. If possible, authors SHOULD consider using a different HTML element which allows the specified role, such as the `button` element.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-reset"
+    },
+    {
+      "id": "el-input-search",
+      "element": "input type=search, with no list attribute",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "search"
+        ],
+        "attrs": {
+          "list": false
+        }
+      },
+      "implicitRole": "searchbox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=searchbox",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "searchbox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "searchbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than searchbox, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `searchbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-search"
+    },
+    {
+      "id": "el-input-submit",
+      "element": "input type=submit",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "submit"
+        ]
+      },
+      "implicitRole": "button",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=button",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "button",
+        "checkbox",
+        "combobox",
+        "gridcell",
+        "link",
+        "menuitem",
+        "menuitemcheckbox",
+        "menuitemradio",
+        "option",
+        "radio",
+        "separator",
+        "slider",
+        "switch",
+        "tab",
+        "treeitem"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "The following roles are allowed, but are NOT RECOMMENDED: `button`, `checkbox`, `combobox`, `gridcell`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `separator`, `slider`, `switch`, `tab` or `treeitem`. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. If possible, authors SHOULD consider using a different HTML element which allows the specified role, such as the `button` element.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-submit"
+    },
+    {
+      "id": "el-input-tel",
+      "element": "input type=tel, with no list attribute",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "tel"
+        ],
+        "attrs": {
+          "list": false
+        }
+      },
+      "implicitRole": "textbox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=textbox",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "textbox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "textbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than textbox, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `textbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-tel"
+    },
+    {
+      "id": "el-input-text",
+      "element": "input type=text or with a missing or invalid type, with no list attribute",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "text",
+          ""
+        ],
+        "attrs": {
+          "list": false
+        }
+      },
+      "implicitRole": "textbox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=textbox",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "combobox",
+        "searchbox",
+        "spinbutton"
+      ],
+      "notRecommendedRoles": [
+        "textbox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `combobox`, `searchbox` or `spinbutton`. (textbox is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-text"
+    },
+    {
+      "id": "el-input-text-list",
+      "element": "input type=text, search, tel, url, email, or with a missing or invalid type, with a list attribute",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "text",
+          "search",
+          "tel",
+          "url",
+          "email",
+          ""
+        ],
+        "attrs": {
+          "list": true
+        }
+      },
+      "implicitRole": "combobox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=combobox",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "combobox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "combobox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "should-not",
+          "attributes": [
+            {
+              "name": "aria-haspopup",
+              "value": null
+            }
+          ],
+          "text": "Authors SHOULD NOT use the `aria-haspopup` attribute on the indicated `input`s with a `list` attribute."
+        }
+      ],
+      "text": "No `role` other than combobox, which is NOT RECOMMENDED. Authors SHOULD NOT use the `aria-haspopup` attribute on the indicated `input`s with a `list` attribute. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes applicable to the `combobox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-text-list"
+    },
+    {
+      "id": "el-input-time",
+      "element": "input type=time",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "time"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "textbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` Global `aria-*` attributes and any `aria-*` attributes applicable to the `textbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-time"
+    },
+    {
+      "id": "el-input-url",
+      "element": "input type=url with no list attribute",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "url"
+        ],
+        "attrs": {
+          "list": false
+        }
+      },
+      "implicitRole": "textbox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=textbox",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "textbox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "textbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than textbox, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `textbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-url"
+    },
+    {
+      "id": "el-input-week",
+      "element": "input type=week",
+      "match": {
+        "tags": [
+          "input"
+        ],
+        "inputTypes": [
+          "week"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "textbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` Global `aria-*` attributes and any `aria-*` attributes applicable to the `textbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-input-week"
+    },
+    {
+      "id": "el-ins",
+      "element": "ins",
+      "match": {
+        "tags": [
+          "ins"
+        ]
+      },
+      "implicitRole": "insertion",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`insertion`",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "insertion"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `insertion` is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-ins"
+    },
+    {
+      "id": "el-kbd",
+      "element": "kbd",
+      "match": {
+        "tags": [
+          "kbd"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role` Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-kbd"
+    },
+    {
+      "id": "el-label",
+      "element": "label",
+      "match": {
+        "tags": [
+          "label"
+        ],
+        "context": "no role when associated with a labelable element"
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "If a `label` element is implicitly or explicitly associated with a labelable element then no `role` Otherwise, if the `label` is not associated with an element then any `role`, though generic SHOULD NOT be used. Naming Prohibited if exposed as the `generic` role, or if exposed as another role which prohibits naming. Otherwise, global `aria-*` attributes.",
+      "contextFallbackPolicy": "any",
+      "url": "https://www.w3.org/TR/html-aria/#el-label"
+    },
+    {
+      "id": "el-legend",
+      "element": "legend",
+      "match": {
+        "tags": [
+          "legend"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` Naming Prohibited Otherwise, global `aria-*` attributes.",
+      "url": "https://www.w3.org/TR/html-aria/#el-legend"
+    },
+    {
+      "id": "el-li",
+      "element": "li",
+      "match": {
+        "tags": [
+          "li"
+        ],
+        "context": "depends on whether parent exposes the list role"
+      },
+      "implicitRole": "listitem",
+      "implicitRoleAlternatives": [
+        "generic"
+      ],
+      "implicitText": "If the `li` is a child of an element exposed as a `role=list` (e.g., `ul`, `ol`, `menu`): role=listitem. Otherwise, role=generic",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "listitem"
+      ],
+      "shouldNotRoles": [
+        "doc-biblioentry",
+        "doc-endnote"
+      ],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than listitem, which is NOT RECOMMENDED, if the parent list element has an implicit or explicit `list` role. Otherwise, any `role` if the parent list element does not expose an implicit or explicit `list` role. See `ul`, `ol`, or `menu` for allowed roles for list elements. Global`aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. Authors SHOULD NOT use the following deprecated DPub Roles: `doc-biblioentry`, `doc-endnote`.",
+      "contextFallbackPolicy": "any",
+      "url": "https://www.w3.org/TR/html-aria/#el-li"
+    },
+    {
+      "id": "el-link",
+      "element": "link",
+      "match": {
+        "tags": [
+          "link"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-link"
+    },
+    {
+      "id": "el-main",
+      "element": "main",
+      "match": {
+        "tags": [
+          "main"
+        ]
+      },
+      "implicitRole": "main",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=main",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "main"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "main"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than main, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `main` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-main"
+    },
+    {
+      "id": "el-map",
+      "element": "map",
+      "match": {
+        "tags": [
+          "map"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-map"
+    },
+    {
+      "id": "el-mark",
+      "element": "mark",
+      "match": {
+        "tags": [
+          "mark"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role` Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-mark"
+    },
+    {
+      "id": "el-math",
+      "element": "math",
+      "match": {
+        "tags": [
+          "math"
+        ]
+      },
+      "implicitRole": "math",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=math",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "math"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "math"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than math, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `math` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-math"
+    },
+    {
+      "id": "el-menu",
+      "element": "menu",
+      "match": {
+        "tags": [
+          "menu"
+        ]
+      },
+      "implicitRole": "list",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=list",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "group",
+        "listbox",
+        "menu",
+        "menubar",
+        "none",
+        "presentation",
+        "radiogroup",
+        "tablist",
+        "toolbar",
+        "tree"
+      ],
+      "notRecommendedRoles": [
+        "list"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `group`, `listbox`, `menu`, `menubar`, `none`, `presentation`, `radiogroup`, `tablist`, `toolbar` or `tree`. (list is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. Authors SHOULD NOT use deprecated `directory` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-menu"
+    },
+    {
+      "id": "el-meta",
+      "element": "meta",
+      "match": {
+        "tags": [
+          "meta"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-meta"
+    },
+    {
+      "id": "el-meter",
+      "element": "meter",
+      "match": {
+        "tags": [
+          "meter"
+        ]
+      },
+      "implicitRole": "meter",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`meter`",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "meter"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "meter"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "should-not",
+          "attributes": [
+            {
+              "name": "aria-valuemax",
+              "value": null
+            },
+            {
+              "name": "aria-valuemin",
+              "value": null
+            }
+          ],
+          "text": "Authors SHOULD NOT use the `aria-valuemax` or `aria-valuemin` attributes on `meter` elements."
+        }
+      ],
+      "text": "No `role` other than `meter`, which is NOT RECOMMENDED. Authors SHOULD NOT use the `aria-valuemax` or `aria-valuemin` attributes on `meter` elements. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes applicable to the `meter` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-meter"
+    },
+    {
+      "id": "el-nav",
+      "element": "nav",
+      "match": {
+        "tags": [
+          "nav"
+        ]
+      },
+      "implicitRole": "navigation",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=navigation",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "menu",
+        "menubar",
+        "none",
+        "presentation",
+        "tablist",
+        "doc-index",
+        "doc-pagelist",
+        "doc-toc"
+      ],
+      "notRecommendedRoles": [
+        "navigation"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `menu`, `menubar`, `none`, `presentation` or `tablist`. (navigation is also allowed, but NOT RECOMMENDED.) DPub Roles: `doc-index`, `doc-pagelist` or `doc-toc` Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-nav"
+    },
+    {
+      "id": "el-noscript",
+      "element": "noscript",
+      "match": {
+        "tags": [
+          "noscript"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-noscript"
+    },
+    {
+      "id": "el-object",
+      "element": "object",
+      "match": {
+        "tags": [
+          "object"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "application",
+        "document",
+        "img"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `application`, `document`, `img` or `image`. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-object"
+    },
+    {
+      "id": "el-ol",
+      "element": "ol",
+      "match": {
+        "tags": [
+          "ol"
+        ]
+      },
+      "implicitRole": "list",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=list",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "group",
+        "listbox",
+        "menu",
+        "menubar",
+        "none",
+        "presentation",
+        "radiogroup",
+        "tablist",
+        "toolbar",
+        "tree"
+      ],
+      "notRecommendedRoles": [
+        "list"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `group`, `listbox`, `menu`, `menubar`, `none`, `presentation`, `radiogroup`, `tablist`, `toolbar` or `tree`. (list is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. Authors SHOULD NOT use deprecated `directory` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-ol"
+    },
+    {
+      "id": "el-optgroup",
+      "element": "optgroup",
+      "match": {
+        "tags": [
+          "optgroup"
+        ]
+      },
+      "implicitRole": "group",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=group",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "group"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "group"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than group, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `group` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-optgroup"
+    },
+    {
+      "id": "el-option",
+      "element": "option element that is in a list of options or that represents a suggestion in a datalist",
+      "match": {
+        "tags": [
+          "option"
+        ],
+        "context": "in a list of options or datalist suggestion"
+      },
+      "implicitRole": "option",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=option",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "option"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "option"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "should-not",
+          "attributes": [
+            {
+              "name": "aria-selected",
+              "value": null
+            }
+          ],
+          "text": "Authors SHOULD NOT use the `aria-selected` attribute on the `option` element."
+        }
+      ],
+      "text": "No `role` other than option, which is NOT RECOMMENDED. Authors SHOULD NOT use the `aria-selected` attribute on the `option` element. Global `aria-*` attributes and any other `aria-*` attributes applicable to the `option` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-option"
+    },
+    {
+      "id": "el-output",
+      "element": "output",
+      "match": {
+        "tags": [
+          "output"
+        ]
+      },
+      "implicitRole": "status",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=status",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "status"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though status is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-output"
+    },
+    {
+      "id": "el-p",
+      "element": "p",
+      "match": {
+        "tags": [
+          "p"
+        ]
+      },
+      "implicitRole": "paragraph",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`paragraph`",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "paragraph"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `paragraph` is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-p"
+    },
+    {
+      "id": "el-param",
+      "element": "param",
+      "match": {
+        "tags": [
+          "param"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-param"
+    },
+    {
+      "id": "el-picture",
+      "element": "picture",
+      "match": {
+        "tags": [
+          "picture"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "hidden-only",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` Authors MAY specify the `aria-hidden` attribute on the `picture` element. Otherwise, no other allowed `aria-*` attributes.",
+      "url": "https://www.w3.org/TR/html-aria/#el-picture"
+    },
+    {
+      "id": "el-pre",
+      "element": "pre",
+      "match": {
+        "tags": [
+          "pre"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-pre"
+    },
+    {
+      "id": "el-progress",
+      "element": "progress",
+      "match": {
+        "tags": [
+          "progress"
+        ]
+      },
+      "implicitRole": "progressbar",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=progressbar",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "progressbar"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "progressbar"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "should-not",
+          "attributes": [
+            {
+              "name": "aria-valuemax",
+              "value": null
+            }
+          ],
+          "text": "Authors SHOULD NOT use the `aria-valuemax` attribute on `progress` elements."
+        }
+      ],
+      "text": "No `role` other than progressbar, which is NOT RECOMMENDED. Authors SHOULD NOT use the `aria-valuemax` attribute on `progress` elements. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes applicable to the `progressbar` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-progress"
+    },
+    {
+      "id": "el-q",
+      "element": "q",
+      "match": {
+        "tags": [
+          "q"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-q"
+    },
+    {
+      "id": "el-rp",
+      "element": "rp",
+      "match": {
+        "tags": [
+          "rp"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role` Naming Prohibited Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-rp"
+    },
+    {
+      "id": "el-rt",
+      "element": "rt",
+      "match": {
+        "tags": [
+          "rt"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role` Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-rt"
+    },
+    {
+      "id": "el-ruby",
+      "element": "ruby",
+      "match": {
+        "tags": [
+          "ruby"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role` Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-ruby"
+    },
+    {
+      "id": "el-s",
+      "element": "s",
+      "match": {
+        "tags": [
+          "s"
+        ]
+      },
+      "implicitRole": "deletion",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`deletion`",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "deletion"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `deletion` is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-s"
+    },
+    {
+      "id": "el-samp",
+      "element": "samp",
+      "match": {
+        "tags": [
+          "samp"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-samp"
+    },
+    {
+      "id": "el-script",
+      "element": "script",
+      "match": {
+        "tags": [
+          "script"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-script"
+    },
+    {
+      "id": "el-search",
+      "element": "search",
+      "match": {
+        "tags": [
+          "search"
+        ]
+      },
+      "implicitRole": "search",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=search",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "form",
+        "group",
+        "none",
+        "presentation",
+        "region"
+      ],
+      "notRecommendedRoles": [
+        "search"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `form`, `group`, `none`, `presentation` or `region`. (search is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-search"
+    },
+    {
+      "id": "el-section",
+      "element": "section",
+      "match": {
+        "tags": [
+          "section"
+        ],
+        "context": "region only when it has an accessible name"
+      },
+      "implicitRole": "region",
+      "implicitRoleAlternatives": [
+        "generic"
+      ],
+      "implicitText": "role=region if the [^section^] element has an accessible name Otherwise, role=generic",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "alert",
+        "alertdialog",
+        "application",
+        "banner",
+        "complementary",
+        "contentinfo",
+        "dialog",
+        "document",
+        "feed",
+        "group",
+        "log",
+        "main",
+        "marquee",
+        "navigation",
+        "none",
+        "note",
+        "presentation",
+        "search",
+        "status",
+        "tabpanel",
+        "doc-abstract",
+        "doc-acknowledgments",
+        "doc-afterword",
+        "doc-appendix",
+        "doc-bibliography",
+        "doc-chapter",
+        "doc-colophon",
+        "doc-conclusion",
+        "doc-credit",
+        "doc-credits",
+        "doc-dedication",
+        "doc-endnotes",
+        "doc-epigraph",
+        "doc-epilogue",
+        "doc-errata",
+        "doc-example",
+        "doc-foreword",
+        "doc-glossary",
+        "doc-index",
+        "doc-introduction",
+        "doc-notice",
+        "doc-pagelist",
+        "doc-part",
+        "doc-preface",
+        "doc-prologue",
+        "doc-pullquote",
+        "doc-qna",
+        "doc-toc"
+      ],
+      "notRecommendedRoles": [
+        "region"
+      ],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `alert`, `alertdialog`, `application`, `banner`, `complementary`, `contentinfo`, `dialog`, `document`, `feed`, `group`, `log`, `main`, `marquee`, `navigation`, `none`, `note`, `presentation`, `search`, `status` or `tabpanel`. (role=region is also allowed, but NOT RECOMMENDED. role=generic SHOULD NOT be used.) DPub Roles: `doc-abstract`, `doc-acknowledgments`, `doc-afterword`, `doc-appendix`, `doc-bibliography`, `doc-chapter`, `doc-colophon`, `doc-conclusion`, `doc-credit`, `doc-credits`, `doc-dedication`, `doc-endnotes`, `doc-epigraph`, `doc-epilogue`, `doc-errata`, `doc-example`, `doc-foreword`, `doc-glossary`, `doc-index`, `doc-introduction`, `doc-notice`, `doc-pagelist`, `doc-part`, `doc-preface`, `doc-prologue`, `doc-pullquote`, `doc-qna`, `doc-toc` Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-section"
+    },
+    {
+      "id": "el-select",
+      "element": "select (rendered as a drop-down box)",
+      "match": {
+        "tags": [
+          "select"
+        ],
+        "attrs": {
+          "multiple": false
+        },
+        "context": "no multiple attribute and size <= 1"
+      },
+      "implicitRole": "combobox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=combobox",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "menu"
+      ],
+      "notRecommendedRoles": [
+        "combobox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "combobox",
+        "menu"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "should-not",
+          "attributes": [
+            {
+              "name": "aria-multiselectable",
+              "value": null
+            }
+          ],
+          "text": "(combobox is also allowed, but NOT RECOMMENDED.) Authors SHOULD NOT use the `aria-multiselectable` attribute on a `select` element."
+        }
+      ],
+      "text": "Role: `menu`. (combobox is also allowed, but NOT RECOMMENDED.) Authors SHOULD NOT use the `aria-multiselectable` attribute on a `select` element. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes applicable to the `combobox` or `menu` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-select"
+    },
+    {
+      "id": "el-select-multiple-or-size-greater-1",
+      "element": "select (rendered as a list box)",
+      "match": {
+        "tags": [
+          "select"
+        ],
+        "context": "multiple attribute or size > 1"
+      },
+      "implicitRole": "listbox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=listbox",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "listbox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "listbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [
+        {
+          "level": "should-not",
+          "attributes": [
+            {
+              "name": "aria-multiselectable",
+              "value": null
+            }
+          ],
+          "text": "Authors SHOULD NOT use the `aria-multiselectable` attribute on a `select` element."
+        }
+      ],
+      "text": "No `role` other than listbox, which is NOT RECOMMENDED. Authors SHOULD NOT use the `aria-multiselectable` attribute on a `select` element. Otherwise, any global `aria-*` attributes and any other `aria-*` attributes applicable to the `listbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-select-multiple-or-size-greater-1"
+    },
+    {
+      "id": "el-selectedcontent",
+      "element": "selectedcontent",
+      "match": {
+        "tags": [
+          "selectedcontent"
+        ],
+        "context": "no role or aria-* when a valid descendant of select"
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "generic"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "If used as a valid descendant of a `select` element: no `role` or `aria-*` attributes Otherwise, any `role` if the element is used outside of its intended context as a child of the `button` part of a customizable `select` element, though generic is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "contextFallbackPolicy": "any",
+      "url": "https://www.w3.org/TR/html-aria/#el-selectedcontent"
+    },
+    {
+      "id": "el-slot",
+      "element": "slot",
+      "match": {
+        "tags": [
+          "slot"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-slot"
+    },
+    {
+      "id": "el-small",
+      "element": "small",
+      "match": {
+        "tags": [
+          "small"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-small"
+    },
+    {
+      "id": "el-source",
+      "element": "source",
+      "match": {
+        "tags": [
+          "source"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-source"
+    },
+    {
+      "id": "el-span",
+      "element": "span",
+      "match": {
+        "tags": [
+          "span"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-span"
+    },
+    {
+      "id": "el-strong",
+      "element": "strong",
+      "match": {
+        "tags": [
+          "strong"
+        ]
+      },
+      "implicitRole": "strong",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`strong`",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "strong"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `strong` is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-strong"
+    },
+    {
+      "id": "el-style",
+      "element": "style",
+      "match": {
+        "tags": [
+          "style"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-style"
+    },
+    {
+      "id": "el-sub",
+      "element": "sub",
+      "match": {
+        "tags": [
+          "sub"
+        ]
+      },
+      "implicitRole": "subscript",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=`subscript`",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "subscript"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `subscript` is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-sub"
+    },
+    {
+      "id": "el-summary",
+      "element": "summary",
+      "match": {
+        "tags": [
+          "summary"
+        ],
+        "context": "no role when it is the summary of its parent details"
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role The exposed role of a `summary` element can vary depending on the user agent and assistive technology.",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` if the `summary` element is a summary for its parent details element. Global `aria-*` attributes, `aria-disabled`, and `aria-haspopup` attributes. Otherwise, if the `summary` element is not a summary for its parent details element, authors MAY specify any `role`, and any Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "contextFallbackPolicy": "any",
+      "url": "https://www.w3.org/TR/html-aria/#el-summary"
+    },
+    {
+      "id": "el-sup",
+      "element": "sup",
+      "match": {
+        "tags": [
+          "sup"
+        ]
+      },
+      "implicitRole": "superscript",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=superscript",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "superscript"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though superscript is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-sup"
+    },
+    {
+      "id": "el-svg",
+      "element": "SVG",
+      "match": {
+        "tags": [
+          "svg"
+        ]
+      },
+      "implicitRole": "graphics-document",
+      "implicitRoleAlternatives": [],
+      "implicitText": "`role=graphics-document` as defined by SVG AAM",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "graphics-document"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though `graphics-document` is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-svg"
+    },
+    {
+      "id": "el-table",
+      "element": "table",
+      "match": {
+        "tags": [
+          "table"
+        ]
+      },
+      "implicitRole": "table",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=table",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "table"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though table is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-table"
+    },
+    {
+      "id": "el-tbody",
+      "element": "tbody",
+      "match": {
+        "tags": [
+          "tbody"
+        ]
+      },
+      "implicitRole": "rowgroup",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=rowgroup",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "rowgroup"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though rowgroup is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-tbody"
+    },
+    {
+      "id": "el-td",
+      "element": "td",
+      "match": {
+        "tags": [
+          "td"
+        ],
+        "context": "depends on the ancestor table role"
+      },
+      "implicitRole": "cell",
+      "implicitRoleAlternatives": [
+        "gridcell"
+      ],
+      "implicitText": "role=cell if the ancestor `table` element is exposed as a `role=table` role=gridcell if the ancestor `table` element is exposed as a `role=grid` or `treegrid` No corresponding role if the ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid`",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "cell",
+        "gridcell"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "If the ancestor `table` element has `role=table`, `grid`, or `treegrid`, no `role` other than the following: If the ancestor `table` element is exposed as a `role=table`, then cell is allowed, but NOT RECOMMENDED. If the ancestor `table` element is exposed as a `role=grid` or `treegrid`, then gridcell is allowed, but NOT RECOMMENDED. Otherwise, if the ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid`, any `role`. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "contextFallbackPolicy": "any",
+      "url": "https://www.w3.org/TR/html-aria/#el-td"
+    },
+    {
+      "id": "el-template",
+      "element": "template",
+      "match": {
+        "tags": [
+          "template"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-template"
+    },
+    {
+      "id": "el-textarea",
+      "element": "textarea",
+      "match": {
+        "tags": [
+          "textarea"
+        ]
+      },
+      "implicitRole": "textbox",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=textbox",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "textbox"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "textbox"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` other than textbox, which is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the `textbox` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-textarea"
+    },
+    {
+      "id": "el-tfoot",
+      "element": "tfoot",
+      "match": {
+        "tags": [
+          "tfoot"
+        ]
+      },
+      "implicitRole": "rowgroup",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=rowgroup",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "rowgroup"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though rowgroup is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-tfoot"
+    },
+    {
+      "id": "el-th",
+      "element": "th",
+      "match": {
+        "tags": [
+          "th"
+        ],
+        "context": "depends on the ancestor table role"
+      },
+      "implicitRole": "columnheader",
+      "implicitRoleAlternatives": [
+        "rowheader",
+        "cell",
+        "gridcell"
+      ],
+      "implicitText": "role=columnheader, `rowheader` or `cell` if the ancestor `table` element is exposed as a `role=table` role=columnheader, `rowheader` or `gridcell` if the ancestor `table` element is exposed as a `role=grid` or `treegrid` No corresponding role if the ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid`",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "columnheader",
+        "rowheader",
+        "cell",
+        "gridcell"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "If the ancestor `table` element has `role=table`, `grid`, or `treegrid`, no `role` other than the following: If the ancestor `table` element is exposed as a `role=table`, then columnheader, `rowheader` and `cell` are allowed, but NOT RECOMMENDED. If the ancestor `table` element is exposed as a `role=grid` or `treegrid`, then columnheader, `rowheader` or `gridcell` are allowed, but NOT RECOMMENDED. Otherwise, if the ancestor `table` element is not exposed as a `role=table`, `grid` or `treegrid`, any `role`. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "contextFallbackPolicy": "any",
+      "url": "https://www.w3.org/TR/html-aria/#el-th"
+    },
+    {
+      "id": "el-thead",
+      "element": "thead",
+      "match": {
+        "tags": [
+          "thead"
+        ]
+      },
+      "implicitRole": "rowgroup",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=rowgroup",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "rowgroup"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though rowgroup is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-thead"
+    },
+    {
+      "id": "el-time",
+      "element": "time",
+      "match": {
+        "tags": [
+          "time"
+        ]
+      },
+      "implicitRole": "time",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=time",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "time"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though time is NOT RECOMMENDED. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-time"
+    },
+    {
+      "id": "el-title",
+      "element": "title",
+      "match": {
+        "tags": [
+          "title"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-title"
+    },
+    {
+      "id": "el-tr",
+      "element": "tr",
+      "match": {
+        "tags": [
+          "tr"
+        ],
+        "context": "depends on the ancestor table role"
+      },
+      "implicitRole": "row",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=row",
+      "rolePolicy": "list",
+      "allowedRoles": [],
+      "notRecommendedRoles": [
+        "row"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "If the ancestor `table` element has `role=table`, `grid`, or `treegrid`, no `role` other than row, which is NOT RECOMMENDED; otherwise any `role`, though row is NOT RECOMMENDED. Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "contextFallbackPolicy": "any",
+      "url": "https://www.w3.org/TR/html-aria/#el-tr"
+    },
+    {
+      "id": "el-track",
+      "element": "track",
+      "match": {
+        "tags": [
+          "track"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "none",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "none",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "No `role` or `aria-*` attributes",
+      "url": "https://www.w3.org/TR/html-aria/#el-track"
+    },
+    {
+      "id": "el-u",
+      "element": "u",
+      "match": {
+        "tags": [
+          "u"
+        ]
+      },
+      "implicitRole": "generic",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=generic",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [
+        "generic"
+      ],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role`, though generic SHOULD NOT be used. Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-u"
+    },
+    {
+      "id": "el-ul",
+      "element": "ul",
+      "match": {
+        "tags": [
+          "ul"
+        ]
+      },
+      "implicitRole": "list",
+      "implicitRoleAlternatives": [],
+      "implicitText": "role=list",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "group",
+        "listbox",
+        "menu",
+        "menubar",
+        "none",
+        "presentation",
+        "radiogroup",
+        "tablist",
+        "toolbar",
+        "tree"
+      ],
+      "notRecommendedRoles": [
+        "list"
+      ],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `group`, `listbox`, `menu`, `menubar`, `none`, `presentation`, `radiogroup`, `tablist`, `toolbar` or `tree`. (list is also allowed, but NOT RECOMMENDED.) Global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles. Authors SHOULD NOT use the deprecated `directory` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-ul"
+    },
+    {
+      "id": "el-var",
+      "element": "var",
+      "match": {
+        "tags": [
+          "var"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "any",
+      "allowedRoles": [],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": true,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Any `role` Naming Prohibited Otherwise, global `aria-*` attributes and any `aria-*` attributes applicable to the allowed roles.",
+      "url": "https://www.w3.org/TR/html-aria/#el-var"
+    },
+    {
+      "id": "el-video",
+      "element": "video",
+      "match": {
+        "tags": [
+          "video"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "application"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "global-and-role",
+      "ariaRoles": [
+        "application"
+      ],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Role: `application` Global `aria-*` attributes and any `aria-*` attributes applicable to the `application` role.",
+      "url": "https://www.w3.org/TR/html-aria/#el-video"
+    },
+    {
+      "id": "el-wbr",
+      "element": "wbr",
+      "match": {
+        "tags": [
+          "wbr"
+        ]
+      },
+      "implicitRole": null,
+      "implicitRoleAlternatives": [],
+      "implicitText": "No corresponding role",
+      "rolePolicy": "list",
+      "allowedRoles": [
+        "none",
+        "presentation"
+      ],
+      "notRecommendedRoles": [],
+      "shouldNotRoles": [],
+      "namingProhibited": false,
+      "ariaPolicy": "hidden-only",
+      "ariaRoles": [],
+      "additionalAttributes": [],
+      "attributeRules": [],
+      "text": "Roles: `none` or `presentation` Authors MAY specify the `aria-hidden` attribute on the `wbr` element. Otherwise, no other allowed `aria-*` attributes.",
+      "url": "https://www.w3.org/TR/html-aria/#el-wbr"
+    }
+  ],
+  "nativeEquivalents": [
+    {
+      "htmlFeature": "Any element where the checked attribute is allowed",
+      "ariaAttribute": "aria-checked",
+      "ariaUsage": "aria-checked=\"true\"",
+      "guidance": "Use the checked attribute on any element that is allowed the checked attribute in HTML. Use the indeterminate IDL attribute to indicate the \"mixed\" state for input type=checkbox elements. Authors MUST NOT use the aria-checked attribute on any element where the checkedness, or the indeterminate checked value of the element can be in opposition to the current value of the aria-checked attribute. Authors MAY use the aria-checked attribute on any other element with a WAI-ARIA role which allows the attribute."
+    },
+    {
+      "htmlFeature": "Any element where the disabled attribute is allowed, including option disabled and optgroup disabled",
+      "ariaAttribute": "aria-disabled",
+      "ariaUsage": "aria-disabled=\"true\"",
+      "guidance": "Use the disabled attribute on any element that is allowed the disabled attribute in HTML. Authors MAY use the aria-disabled attribute on any element that is allowed the disabled attribute in HTML, or any element with a WAI-ARIA role which allows the aria-disabled attribute. Authors SHOULD NOT use aria-disabled=\"true\" on any element which also has a disabled attribute. Authors MUST NOT use aria-disabled=\"false\" on any element which also has a disabled attribute."
+    },
+    {
+      "htmlFeature": "Any element with a hidden attribute",
+      "ariaAttribute": "aria-hidden",
+      "ariaUsage": "aria-hidden=\"true\"",
+      "guidance": "Authors MAY use the aria-hidden attribute on any HTML element that allows Global aria-* attributes to be specified, with the exception of focusable elements and the body element. It is generally NOT RECOMMENDED for authors to use aria-hidden=\"true\" on any element which also has the hidden attribute specified. However, authors MUST NOT use aria-hidden=\"true\" on any element which also has the hidden attribute specified in the Hidden Until Found state. A focusable element is any element which can be focused by use of keyboard or pointer device. Focusable elements are not always elements which can be tabbed to via a keyboard. For instance, an element with tabindex=\"-1\" is focusable but is not a tabbable element. Using aria-hidden=\"true\" on an element that has the hidden attribute is at best an unnecessary redundancy. At worst its usage can prevent access to the content if the hidden attribute's default UA style of display: none has been purposefully overwritten by an author or user style sheet. Finally, if the hidden attribute is in the Hidden Until Found state, the use of aria-hidden=true will prevent this content from being discoverable to users of assistive technology when it is found via a browser's in-page find feature and visually rendered to users."
+    },
+    {
+      "htmlFeature": "Any element where the placeholder attribute is allowed",
+      "ariaAttribute": "aria-placeholder",
+      "ariaUsage": "aria-placeholder=\"...\"",
+      "guidance": "Use the placeholder attribute on any element that is allowed the placeholder attribute in HTML. Authors MAY use the aria-placeholder attribute on any element that is allowed the placeholder attribute in HTML, or any element with a WAI-ARIA role which allows the aria-placeholder attribute. Authors MUST NOT use the aria-placeholder attribute on any element which also has a placeholder attribute."
+    },
+    {
+      "htmlFeature": "Any element where the max attribute is allowed: meter max, progress max, and input max",
+      "ariaAttribute": "aria-valuemax",
+      "ariaUsage": "aria-valuemax=\"...\"",
+      "guidance": "Use the max attribute on any element that is allowed the max attribute in HTML. Authors MAY use the aria-valuemax attribute on any other element with a WAI-ARIA role which allows the aria-valuemax attribute. Authors SHOULD NOT use aria-valuemax on any element which allows the max attribute. Use the max attribute instead. Authors MUST NOT use aria-valuemax on any element which also has a max attribute."
+    },
+    {
+      "htmlFeature": "Any element where the min attribute is allowed: meter min and input min",
+      "ariaAttribute": "aria-valuemin",
+      "ariaUsage": "aria-valuemin=\"...\"",
+      "guidance": "Use the min attribute on any element that is allowed the min attribute in HTML. Authors MAY use the aria-valuemin attribute on any other element with a WAI-ARIA role which allows the aria-valuemin attribute. Authors SHOULD NOT use aria-valuemin on any element which allows the min attribute. Use the min attribute instead. Authors MUST NOT use aria-valuemin on any element which also has a min attribute."
+    },
+    {
+      "htmlFeature": "Any element which allows the readonly attribute: input readonly, textarea readonly and form-associated custom element which allows readonly",
+      "ariaAttribute": "aria-readonly",
+      "ariaUsage": "aria-readonly=\"true\"",
+      "guidance": "Use the readonly attribute on any element that is allowed the readonly attribute in HTML. Authors MAY use the aria-readonly attribute on any element with a WAI-ARIA role which allows the attribute. Authors SHOULD NOT use the aria-readonly=\"true\" on any element which also has a readonly attribute. Authors MUST NOT use aria-readonly=\"false\" on any element which also has a readonly attribute."
+    },
+    {
+      "htmlFeature": "Element with contenteditable=true or element without contenteditable attribute whose closest ancestor with a contenteditable attribute has contenteditable=\"true\". This is equivalent to the isContentEditable IDL attribute.",
+      "ariaAttribute": "aria-readonly",
+      "ariaUsage": "aria-readonly=\"false\"",
+      "guidance": "Authors MUST NOT set aria-readonly=\"true\" on an element that has isContentEditable=\"true\"."
+    },
+    {
+      "htmlFeature": "Any element where the required attribute is allowed: input required, textarea required, and select required",
+      "ariaAttribute": "aria-required",
+      "ariaUsage": "aria-required=\"true\"",
+      "guidance": "Use the required attribute on any element that is allowed the required attribute in HTML. Authors MAY use the aria-required attribute on any element that is allowed the required attribute in HTML, or any element with a WAI-ARIA role which allows the aria-required attribute. Authors SHOULD NOT use the aria-required=\"true\" on any element which also has a required attribute. Authors MUST NOT use aria-required=\"false\" on any element which also has a required attribute."
+    },
+    {
+      "htmlFeature": "Any element where the colspan attribute is allowed: td and th",
+      "ariaAttribute": "aria-colspan",
+      "ariaUsage": "aria-colspan=\"...\"",
+      "guidance": "Use the colspan attribute on any element that is allowed the colspan attribute in HTML. Authors SHOULD NOT use the aria-colspan attribute on any element which also has a colspan attribute. Authors MUST NOT use aria-colspan on any element which also has a colspan attribute, and the values of each attribute do not match."
+    },
+    {
+      "htmlFeature": "Any element where the rowspan attribute is allowed: td and th",
+      "ariaAttribute": "aria-rowspan",
+      "ariaUsage": "aria-rowspan=\"...\"",
+      "guidance": "Use the rowspan attribute on any element that is allowed the rowspan attribute in HTML. Authors SHOULD NOT use the aria-rowspan attribute on any element which also has a rowspan attribute. Authors MUST NOT use aria-rowspan on any element which also has a rowspan attribute, and the values of each attribute do not match."
+    }
+  ]
+}

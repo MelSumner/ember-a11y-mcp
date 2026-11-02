@@ -1,0 +1,60 @@
+{
+  "name": "ember-a11y-mcp",
+  "version": "0.1.0",
+  "description": "MCP server and template linter that guides Ember.js developers to accessible outcomes using WCAG 2.2, WAI-ARIA 1.2, ARIA in HTML, the ARIA Authoring Practices Guide and HDS Ember reference components.",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "ember-a11y-mcp": "./index.js",
+    "ember-a11y-lint": "./bin/ember-a11y-lint.js"
+  },
+  "files": [
+    "index.js",
+    "bin",
+    "lib",
+    "test-support",
+    "data",
+    "LICENSE",
+    "NOTICE.md",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build:data": "node scripts/build-data/index.js",
+    "lint:templates": "node bin/ember-a11y-lint.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage --coverage.include='lib/**' --coverage.include=index.js",
+    "test:mutation": "stryker run",
+    "test:e2e": "vitest run --config vitest.e2e.config.js",
+    "test:e2e:hds": "vitest run --config vitest.e2e.config.js test/e2e/hds-showcase.test.js",
+    "clone-sources": "node scripts/clone-sources.js"
+  },
+  "keywords": [
+    "ember",
+    "accessibility",
+    "a11y",
+    "aria",
+    "wcag",
+    "mcp"
+  ],
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800",
+  "dependencies": {
+    "@glimmer/syntax": "^0.97.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "content-tag": "^4.2.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^10.1.1",
+    "@stryker-mutator/vitest-runner": "^10.1.1",
+    "@vitest/coverage-v8": "5.0.5",
+    "cheerio": "^1.2.0",
+    "playwright-core": "^1.64.1",
+    "vitest": "^5.0.5"
+  }
+}
