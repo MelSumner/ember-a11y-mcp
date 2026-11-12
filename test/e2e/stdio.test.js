@@ -44,8 +44,8 @@ describe('MCP server over stdio', () => {
     expect(client.getServerCapabilities()).toMatchObject({ tools: {}, prompts: {}, resources: {} });
   });
 
-  test('lists 16 tools, 2 prompts and 1 resource', async () => {
-    expect((await client.listTools()).tools).toHaveLength(16);
+  test('lists 18 tools, 2 prompts and 1 resource', async () => {
+    expect((await client.listTools()).tools).toHaveLength(18);
     expect((await client.listPrompts()).prompts.map((p) => p.name)).toEqual(['check_a11y_setup', 'build_accessible_component']);
     expect((await client.listResources()).resources.map((r) => r.uri)).toEqual(['ember-a11y://guide']);
   });

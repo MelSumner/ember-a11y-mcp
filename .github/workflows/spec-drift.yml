@@ -1,6 +1,6 @@
 name: Spec drift
 
-# Manual only: rebuild data from the latest ARIA, ARIA in HTML, APG, WCAG and HDS sources and run every suite.
+# Manual only: rebuild data from the latest ARIA, WHATWG HTML, ARIA in HTML, APG, WCAG and HDS sources and run every suite.
 # Opens (or comments on) an issue labelled "spec-drift" when the data changes or a suite fails. Never
 # blocks merges; update the data with `node scripts/clone-sources.js --latest && pnpm build:data`.
 # Not scheduled: the reference clones are refreshed by hand.

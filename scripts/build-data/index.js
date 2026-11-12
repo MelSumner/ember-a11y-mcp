@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Builds data/*.json from local clones of the W3C source repositories (and HashiCorp Helios).
-// Usage: node scripts/build-data/index.js [--sources <dir>] [--out <dir>] [--only aria,html-aria,apg,wcag,hds]
+// Usage: node scripts/build-data/index.js [--sources <dir>] [--out <dir>] [--only aria,html-standard,html-aam,html-aria,apg,wcag,hds]
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -24,6 +24,8 @@ mkdirSync(outDir, { recursive: true });
 
 const builders = {
   aria: async () => (await import('./aria.js')).buildAria({ sourceDir: join(sourcesDir, 'aria') }),
+  'html-standard': async () => (await import('./html-standard.js')).buildHtmlStandard(),
+  'html-aam': async () => (await import('./html-aam.js')).buildHtmlAam({ sourceDir: join(sourcesDir, 'aria') }),
   'html-aria': async () =>
     (await import('./html-aria.js')).buildHtmlAria({ sourceDir: join(sourcesDir, 'html-aria') }),
   apg: async () => (await import('./apg.js')).buildApg({ sourceDir: join(sourcesDir, 'aria-practices') }),

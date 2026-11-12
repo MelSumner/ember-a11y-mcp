@@ -30,7 +30,7 @@ describe('published package', () => {
   test('contains runtime files and data, but no tests or build scripts', () => {
     const files = packed.files.map((f) => f.path);
     for (const f of ['index.js', 'bin/ember-a11y-lint.js', 'lib/tools.js', 'lib/lint/rules.js', 'test-support/focus.js', 'LICENSE', 'NOTICE.md', 'README.md']) expect(files).toContain(f);
-    for (const d of ['aria', 'html-aria', 'apg', 'wcag', 'hds']) expect(files).toContain(`data/${d}.json`);
+    for (const d of ['aria', 'html-standard', 'html-aam', 'html-aria', 'apg', 'wcag', 'hds']) expect(files).toContain(`data/${d}.json`);
     expect(files.filter((f) => /^(test|scripts|coverage)\//.test(f) || f.startsWith('vitest'))).toEqual([]);
   });
 
@@ -52,7 +52,7 @@ describe('published package', () => {
     const client = new Client({ name: 'e2e-pack', version: '0.0.0' });
     await client.connect(transport);
     try {
-      expect((await client.listTools()).tools).toHaveLength(16);
+      expect((await client.listTools()).tools).toHaveLength(18);
       const r = await client.callTool({ name: 'audit_ember_template', arguments: { path: 'app' } });
       expect(r.structuredContent.findings.length).toBeGreaterThanOrEqual(2);
       const setup = await client.callTool({ name: 'audit_project_setup', arguments: {} });

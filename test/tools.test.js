@@ -4,11 +4,11 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { Preprocessor } from 'content-tag';
 import {
-  getAriaRole, getAriaAttribute, getHtmlElementRules, listApgPatterns, getApgPattern, getApgExample,
+  getAriaRole, getAriaAttribute, getHtmlElementRules, getHtmlElementInfo, getHtmlAamMapping, listApgPatterns, getApgPattern, getApgExample,
   searchGuidance, auditEmberTemplate, generateEmberA11yTests, toKeyEvent,
   getEmberExample, getWcagCriterion, listWcagCriteria, getWcagTechnique,
 } from '../lib/tools.js';
-import { apg } from '../lib/data/index.js';
+import { apg, htmlStandard } from '../lib/data/index.js';
 
 describe('spec lookups', () => {
   test('role, attribute and element lookups', () => {
@@ -18,12 +18,35 @@ describe('spec lookups', () => {
     expect(getHtmlElementRules({ element: 'button' })).toMatch(/button/);
   });
 
+  test('HTML-AAM lookups include element, attribute and name-computation mappings', () => {
+    expect(getHtmlAamMapping({ query: 'button' })).toMatch(/button.*role/s);
+    expect(getHtmlAamMapping({ query: 'checked', kind: 'attribute' })).toMatch(/aria-checked.*true/s);
+    expect(getHtmlAamMapping({ query: 'button', kind: 'computation' })).toMatch(/subtree/);
+  });
+
+  test('HTML Standard lookup answers dt focus and attribute questions locally', () => {
+    const info = getHtmlElementInfo({ element: 'dt' });
+    expect(info).toMatch(/<dt>/);
+    expect(info).toMatch(/tabindex/);
+    expect(info).toMatch(/platform conventions/);
+    expect(getHtmlElementInfo({ element: 'dt', attribute: 'autofocus' })).toMatch(/valid HTML attribute/);
+    expect(getHtmlElementInfo({ element: 'dt', attribute: 'href' })).toMatch(/No: `href`/);
+  });
+
+  test('HTML Standard lookup resolves every indexed element name', () => {
+    for (const tag of htmlStandard().elements.flatMap((entry) => entry.tags)) {
+      expect(getHtmlElementInfo({ element: tag }), tag).toContain(`# <${tag}>`);
+    }
+  });
+
   test('APG pattern, example and search', () => {
     expect(listApgPatterns()).toMatch(/tabs/);
     expect(getApgPattern({ pattern: 'tabs' })).toMatch(/Ember/);
     const ex = apg().examples[0].id;
     expect(getApgExample({ example: ex }).length).toBeGreaterThan(200);
     expect(searchGuidance({ query: 'focus trap modal dialog' })).toMatch(/dialog/i);
+    expect(searchGuidance({ query: 'HTML-AAM input checkbox' })).toMatch(/get_html_aam_mapping/);
+    expect(searchGuidance({ query: 'WHATWG HTML dt autofocus' })).toMatch(/get_html_element_info/);
   });
 });
 

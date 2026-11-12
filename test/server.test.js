@@ -20,7 +20,7 @@ describe('MCP server', () => {
     const { tools } = await client.listTools();
     expect(tools.map((t) => t.name).sort()).toEqual([
       'audit_ember_template', 'audit_project_setup', 'generate_ember_a11y_tests', 'get_apg_example', 'get_apg_pattern', 'get_aria_attribute', 'get_aria_role',
-      'get_ember_example', 'get_html_element_rules', 'get_related_files', 'get_wcag_criterion', 'get_wcag_technique', 'list_a11y_todos', 'list_apg_patterns', 'list_wcag_criteria', 'search_a11y_guidance',
+      'get_ember_example', 'get_html_aam_mapping', 'get_html_element_info', 'get_html_element_rules', 'get_related_files', 'get_wcag_criterion', 'get_wcag_technique', 'list_a11y_todos', 'list_apg_patterns', 'list_wcag_criteria', 'search_a11y_guidance',
     ]);
     for (const t of tools) {
       expect(t.description.length, t.name).toBeGreaterThan(40);
@@ -33,6 +33,10 @@ describe('MCP server', () => {
     ['get_aria_role', { role: 'tab' }, /tablist/],
     ['get_aria_attribute', { attribute: 'aria-description' }, /allows it on any element/],
     ['get_html_element_rules', { element: 'a' }, /link/],
+    ['get_html_aam_mapping', { query: 'button' }, /button.*role/s],
+    ['get_html_aam_mapping', { query: 'checked', kind: 'attribute' }, /aria-checked.*true/s],
+    ['get_html_aam_mapping', { query: 'button', kind: 'computation' }, /subtree/],
+    ['get_html_element_info', { element: 'dt', attribute: 'autofocus' }, /valid HTML attribute/],
     ['list_apg_patterns', {}, /dialog-modal/],
     ['get_apg_pattern', { pattern: 'tabs' }, /Ember reference implementations/],
     ['get_apg_example', { example: 'tabs-manual' }, /Keyboard support/],

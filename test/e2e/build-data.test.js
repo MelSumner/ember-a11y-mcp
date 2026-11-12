@@ -9,7 +9,7 @@ import { afterAll, beforeAll, describe, expect, test } from 'vitest';
 
 const projectDir = fileURLToPath(new URL('../..', import.meta.url));
 const sources = process.env.A11Y_SOURCES_DIR ?? join(projectDir, '..');
-const DATASETS = { aria: 'aria', 'html-aria': 'html-aria', apg: 'aria-practices', wcag: 'wcag', hds: 'design-system' };
+const DATASETS = { aria: 'aria', 'html-aam': 'aria', 'html-aria': 'html-aria', apg: 'aria-practices', wcag: 'wcag', hds: 'design-system' };
 const available = Object.keys(DATASETS).filter((d) => existsSync(join(sources, DATASETS[d], '.git')));
 // CI clones every source; a missing one must fail rather than silently shrink the suite.
 if (process.env.CI && available.length !== Object.keys(DATASETS).length) throw new Error(`source clones missing: ${Object.keys(DATASETS).filter((d) => !available.includes(d))}`);

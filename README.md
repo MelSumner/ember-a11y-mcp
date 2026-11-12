@@ -5,7 +5,9 @@ Accessibility help for Ember.js apps, built on the W3C specs. It has two parts:
 - **An [MCP](https://modelcontextprotocol.io) server** for AI coding agents (GitHub Copilot, Claude and others). Your agent can check your project's accessibility setup, audit templates, look up WCAG, ARIA and APG guidance, and generate accessibility tests.
 - **`ember-a11y-lint`**, a command-line linter for `.hbs`, `.gjs` and `.gts` templates. Every finding links to the spec and WCAG criterion behind it and, where possible, shows a fix.
 
-Everything runs locally and offline. The guidance is pre-extracted from WCAG 2.2, WAI-ARIA 1.2, ARIA in HTML, the ARIA Authoring Practices Guide (APG) and the [Helios Design System](https://helios.hashicorp.design) (HDS) Ember components, plus Ember-specific guidance.
+Runtime lookups run locally and offline. The guidance is pre-extracted from WCAG 2.2, WAI-ARIA 1.2, the WHATWG HTML Living Standard, HTML-AAM 1.0, ARIA in HTML, the ARIA Authoring Practices Guide (APG) and the [Helios Design System](https://helios.hashicorp.design) (HDS) Ember components, plus Ember-specific guidance. Refreshing the HTML Standard snapshot requires network access.
+| `get_html_aam_mapping` | HTML-AAM element and attribute mappings to WAI-ARIA, computed roles and platform accessibility APIs, plus HTML accessible-name/description computations |
+| `get_html_element_info` | WHATWG HTML element definition, applicable global/element-specific content attributes, direct attribute validity checks, and focus/`tabindex` rules |
 
 > Automated checks find only some accessibility issues. Keep testing with a keyboard, a screen reader, zoom and contrast tools. This tool's output is not a conformance determination.
 

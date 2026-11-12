@@ -1,0 +1,5456 @@
+{
+  "source": {
+    "name": "WHATWG HTML Living Standard",
+    "url": "https://html.spec.whatwg.org/multipage/",
+    "repository": "https://github.com/whatwg/html",
+    "lastUpdated": "12 November 2026",
+    "indexUrl": "https://html.spec.whatwg.org/multipage/indices.html",
+    "indexDigest": "535627e74a0f9e5a1af09f7f23740c31b8b466aa39f0f1baeab6a59f58719c46",
+    "focusUrl": "https://html.spec.whatwg.org/multipage/interaction.html#the-tabindex-attribute",
+    "focusDigest": "63450329b3985a39f9322a13a73d067f09693c6b170bfd8aba5e0dee43c13c8b",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "note": "Element and attribute data comes from the non-normative index, with the custom data-attribute family added from its normative definition; focus behavior is extracted from the tabindex section."
+  },
+  "elements": [
+    {
+      "name": "a",
+      "tags": [
+        "a"
+      ],
+      "description": "Hyperlink",
+      "categories": [
+        "flow",
+        "phrasing*",
+        "interactive",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "transparent*",
+      "attributes": [
+        "globals",
+        "href",
+        "target",
+        "download",
+        "ping",
+        "rel",
+        "hreflang",
+        "type",
+        "referrerpolicy"
+      ],
+      "interface": "HTMLAnchorElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element"
+    },
+    {
+      "name": "abbr",
+      "tags": [
+        "abbr"
+      ],
+      "description": "Abbreviation",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element"
+    },
+    {
+      "name": "address",
+      "tags": [
+        "address"
+      ],
+      "description": "Contact information for a page or article element",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/sections.html#the-address-element"
+    },
+    {
+      "name": "area",
+      "tags": [
+        "area"
+      ],
+      "description": "Hyperlink or dead area on an image map",
+      "categories": [
+        "flow",
+        "phrasing"
+      ],
+      "parents": [
+        "phrasing*"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "alt",
+        "coords",
+        "shape",
+        "href",
+        "target",
+        "download",
+        "ping",
+        "rel",
+        "referrerpolicy"
+      ],
+      "interface": "HTMLAreaElement",
+      "url": "https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element"
+    },
+    {
+      "name": "article",
+      "tags": [
+        "article"
+      ],
+      "description": "Self-contained syndicatable or reusable composition",
+      "categories": [
+        "flow",
+        "sectioning",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/sections.html#the-article-element"
+    },
+    {
+      "name": "aside",
+      "tags": [
+        "aside"
+      ],
+      "description": "Sidebar for tangentially related content",
+      "categories": [
+        "flow",
+        "sectioning",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/sections.html#the-aside-element"
+    },
+    {
+      "name": "audio",
+      "tags": [
+        "audio"
+      ],
+      "description": "Audio player",
+      "categories": [
+        "flow",
+        "phrasing",
+        "embedded",
+        "interactive",
+        "palpable*"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "source*; track*; transparent*",
+      "attributes": [
+        "globals",
+        "src",
+        "crossorigin",
+        "preload",
+        "autoplay",
+        "loading",
+        "loop",
+        "muted",
+        "controls"
+      ],
+      "interface": "HTMLAudioElement",
+      "url": "https://html.spec.whatwg.org/multipage/media.html#the-audio-element"
+    },
+    {
+      "name": "b",
+      "tags": [
+        "b"
+      ],
+      "description": "Keywords",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-b-element"
+    },
+    {
+      "name": "base",
+      "tags": [
+        "base"
+      ],
+      "description": "Base URL and default target navigable for hyperlinks and forms",
+      "categories": [
+        "metadata"
+      ],
+      "parents": [
+        "head"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "href",
+        "target"
+      ],
+      "interface": "HTMLBaseElement",
+      "url": "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element"
+    },
+    {
+      "name": "bdi",
+      "tags": [
+        "bdi"
+      ],
+      "description": "Text directionality isolation",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element"
+    },
+    {
+      "name": "bdo",
+      "tags": [
+        "bdo"
+      ],
+      "description": "Text directionality formatting",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdo-element"
+    },
+    {
+      "name": "blockquote",
+      "tags": [
+        "blockquote"
+      ],
+      "description": "A section quoted from another source",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals",
+        "cite"
+      ],
+      "interface": "HTMLQuoteElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element"
+    },
+    {
+      "name": "body",
+      "tags": [
+        "body"
+      ],
+      "description": "Document body",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "html"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals",
+        "onafterprint",
+        "onbeforeprint",
+        "onbeforeunload",
+        "onhashchange",
+        "onlanguagechange",
+        "onmessage",
+        "onmessageerror",
+        "onoffline",
+        "ononline",
+        "onpageswap",
+        "onpagehide",
+        "onpagereveal",
+        "onpageshow",
+        "onpopstate",
+        "onrejectionhandled",
+        "onstorage",
+        "onunhandledrejection",
+        "onunload"
+      ],
+      "interface": "HTMLBodyElement",
+      "url": "https://html.spec.whatwg.org/multipage/sections.html#the-body-element"
+    },
+    {
+      "name": "br",
+      "tags": [
+        "br"
+      ],
+      "description": "Line break, e.g. in poem or postal address",
+      "categories": [
+        "flow",
+        "phrasing"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLBRElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element"
+    },
+    {
+      "name": "button",
+      "tags": [
+        "button"
+      ],
+      "description": "Button control",
+      "categories": [
+        "flow",
+        "phrasing",
+        "interactive",
+        "listed",
+        "labelable",
+        "submittable",
+        "form-associated",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing",
+        "select*"
+      ],
+      "content": "phrasing*",
+      "attributes": [
+        "globals",
+        "command",
+        "commandfor",
+        "disabled",
+        "form",
+        "formaction",
+        "formenctype",
+        "formmethod",
+        "formnovalidate",
+        "formtarget",
+        "name",
+        "popovertarget",
+        "popovertargetaction",
+        "type",
+        "value"
+      ],
+      "interface": "HTMLButtonElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element"
+    },
+    {
+      "name": "canvas",
+      "tags": [
+        "canvas"
+      ],
+      "description": "Scriptable bitmap canvas",
+      "categories": [
+        "flow",
+        "phrasing",
+        "embedded",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "transparent",
+      "attributes": [
+        "globals",
+        "width",
+        "height"
+      ],
+      "interface": "HTMLCanvasElement",
+      "url": "https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-element"
+    },
+    {
+      "name": "caption",
+      "tags": [
+        "caption"
+      ],
+      "description": "Table caption",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "table"
+      ],
+      "content": "flow*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLTableCaptionElement",
+      "url": "https://html.spec.whatwg.org/multipage/tables.html#the-caption-element"
+    },
+    {
+      "name": "cite",
+      "tags": [
+        "cite"
+      ],
+      "description": "Title of a work",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-cite-element"
+    },
+    {
+      "name": "code",
+      "tags": [
+        "code"
+      ],
+      "description": "Computer code",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element"
+    },
+    {
+      "name": "col",
+      "tags": [
+        "col"
+      ],
+      "description": "Table column",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "colgroup"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "span"
+      ],
+      "interface": "HTMLTableColElement",
+      "url": "https://html.spec.whatwg.org/multipage/tables.html#the-col-element"
+    },
+    {
+      "name": "colgroup",
+      "tags": [
+        "colgroup"
+      ],
+      "description": "Group of columns in a table",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "table"
+      ],
+      "content": "col*; template*",
+      "attributes": [
+        "globals",
+        "span"
+      ],
+      "interface": "HTMLTableColElement",
+      "url": "https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element"
+    },
+    {
+      "name": "data",
+      "tags": [
+        "data"
+      ],
+      "description": "Machine-readable equivalent",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals",
+        "value"
+      ],
+      "interface": "HTMLDataElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-data-element"
+    },
+    {
+      "name": "datalist",
+      "tags": [
+        "datalist"
+      ],
+      "description": "Container for options for combo box control",
+      "categories": [
+        "flow",
+        "phrasing"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing*; option*; script-supporting elements*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLDataListElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element"
+    },
+    {
+      "name": "dd",
+      "tags": [
+        "dd"
+      ],
+      "description": "Content for corresponding dt element(s)",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "dl",
+        "div*"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element"
+    },
+    {
+      "name": "del",
+      "tags": [
+        "del"
+      ],
+      "description": "A removal from the document",
+      "categories": [
+        "flow",
+        "phrasing*",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "transparent",
+      "attributes": [
+        "globals",
+        "cite",
+        "datetime"
+      ],
+      "interface": "HTMLModElement",
+      "url": "https://html.spec.whatwg.org/multipage/edits.html#the-del-element"
+    },
+    {
+      "name": "details",
+      "tags": [
+        "details"
+      ],
+      "description": "Disclosure control for hiding details",
+      "categories": [
+        "flow",
+        "interactive",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "summary*; flow",
+      "attributes": [
+        "globals",
+        "name",
+        "open"
+      ],
+      "interface": "HTMLDetailsElement",
+      "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element"
+    },
+    {
+      "name": "dfn",
+      "tags": [
+        "dfn"
+      ],
+      "description": "Defining instance",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-dfn-element"
+    },
+    {
+      "name": "dialog",
+      "tags": [
+        "dialog"
+      ],
+      "description": "Dialog box or window",
+      "categories": [
+        "flow"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals",
+        "open"
+      ],
+      "interface": "HTMLDialogElement",
+      "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element"
+    },
+    {
+      "name": "div",
+      "tags": [
+        "div"
+      ],
+      "description": "Generic flow container, or container for name-value groups in dl elements",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow",
+        "dl",
+        "option",
+        "optgroup",
+        "select"
+      ],
+      "content": "flow*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLDivElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element"
+    },
+    {
+      "name": "dl",
+      "tags": [
+        "dl"
+      ],
+      "description": "Association list consisting of zero or more name-value groups",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "dt*; dd*; div*; script-supporting elements",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLDListElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element"
+    },
+    {
+      "name": "dt",
+      "tags": [
+        "dt"
+      ],
+      "description": "Legend for corresponding dd element(s)",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "dl",
+        "div*"
+      ],
+      "content": "flow*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dt-element"
+    },
+    {
+      "name": "em",
+      "tags": [
+        "em"
+      ],
+      "description": "Stress emphasis",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element"
+    },
+    {
+      "name": "embed",
+      "tags": [
+        "embed"
+      ],
+      "description": "Plugin",
+      "categories": [
+        "flow",
+        "phrasing",
+        "embedded",
+        "interactive",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "src",
+        "type",
+        "width",
+        "height",
+        "any*"
+      ],
+      "interface": "HTMLEmbedElement",
+      "url": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element"
+    },
+    {
+      "name": "fieldset",
+      "tags": [
+        "fieldset"
+      ],
+      "description": "Group of form controls",
+      "categories": [
+        "flow",
+        "listed",
+        "form-associated",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "legend*; flow",
+      "attributes": [
+        "globals",
+        "disabled",
+        "form",
+        "name"
+      ],
+      "interface": "HTMLFieldSetElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element"
+    },
+    {
+      "name": "figcaption",
+      "tags": [
+        "figcaption"
+      ],
+      "description": "Caption for figure",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "figure"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element"
+    },
+    {
+      "name": "figure",
+      "tags": [
+        "figure"
+      ],
+      "description": "Figure with optional caption",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "figcaption*; flow",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element"
+    },
+    {
+      "name": "footer",
+      "tags": [
+        "footer"
+      ],
+      "description": "Footer for a page or section",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/sections.html#the-footer-element"
+    },
+    {
+      "name": "form",
+      "tags": [
+        "form"
+      ],
+      "description": "User-submittable form",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow*",
+      "attributes": [
+        "globals",
+        "accept-charset",
+        "action",
+        "autocomplete",
+        "enctype",
+        "method",
+        "name",
+        "novalidate",
+        "rel",
+        "target"
+      ],
+      "interface": "HTMLFormElement",
+      "url": "https://html.spec.whatwg.org/multipage/forms.html#the-form-element"
+    },
+    {
+      "name": "h1, h2, h3, h4, h5, h6",
+      "tags": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "description": "Heading",
+      "categories": [
+        "flow",
+        "heading",
+        "palpable"
+      ],
+      "parents": [
+        "legend",
+        "summary",
+        "flow"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLHeadingElement",
+      "url": "https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements"
+    },
+    {
+      "name": "head",
+      "tags": [
+        "head"
+      ],
+      "description": "Container for document metadata",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "html"
+      ],
+      "content": "metadata content*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLHeadElement",
+      "url": "https://html.spec.whatwg.org/multipage/semantics.html#the-head-element"
+    },
+    {
+      "name": "header",
+      "tags": [
+        "header"
+      ],
+      "description": "Introductory or navigational aids for a page or section",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/sections.html#the-header-element"
+    },
+    {
+      "name": "hgroup",
+      "tags": [
+        "hgroup"
+      ],
+      "description": "Heading container",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "legend",
+        "summary",
+        "flow"
+      ],
+      "content": "h1; h2; h3; h4; h5; h6; p; script-supporting elements",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element"
+    },
+    {
+      "name": "hr",
+      "tags": [
+        "hr"
+      ],
+      "description": "Thematic break",
+      "categories": [
+        "flow"
+      ],
+      "parents": [
+        "flow",
+        "select"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLHRElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element"
+    },
+    {
+      "name": "html",
+      "tags": [
+        "html"
+      ],
+      "description": "Root element",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "none*"
+      ],
+      "content": "head*; body*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLHtmlElement",
+      "url": "https://html.spec.whatwg.org/multipage/semantics.html#the-html-element"
+    },
+    {
+      "name": "i",
+      "tags": [
+        "i"
+      ],
+      "description": "Alternate voice",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element"
+    },
+    {
+      "name": "iframe",
+      "tags": [
+        "iframe"
+      ],
+      "description": "Child navigable",
+      "categories": [
+        "flow",
+        "phrasing",
+        "embedded",
+        "interactive",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "src",
+        "srcdoc",
+        "name",
+        "sandbox",
+        "allow",
+        "allowfullscreen",
+        "width",
+        "height",
+        "referrerpolicy",
+        "loading"
+      ],
+      "interface": "HTMLIFrameElement",
+      "url": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element"
+    },
+    {
+      "name": "img",
+      "tags": [
+        "img"
+      ],
+      "description": "Image",
+      "categories": [
+        "flow",
+        "phrasing",
+        "embedded",
+        "interactive*",
+        "form-associated",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing",
+        "picture"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "alt",
+        "src",
+        "srcset",
+        "sizes",
+        "crossorigin",
+        "usemap",
+        "ismap",
+        "controls",
+        "width",
+        "height",
+        "referrerpolicy",
+        "decoding",
+        "loading",
+        "fetchpriority"
+      ],
+      "interface": "HTMLImageElement",
+      "url": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element"
+    },
+    {
+      "name": "input",
+      "tags": [
+        "input"
+      ],
+      "description": "Form control",
+      "categories": [
+        "flow",
+        "phrasing",
+        "interactive*",
+        "listed",
+        "labelable",
+        "submittable",
+        "resettable",
+        "form-associated",
+        "palpable*"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "accept",
+        "alpha",
+        "alt",
+        "autocomplete",
+        "checked",
+        "colorspace",
+        "dirname",
+        "disabled",
+        "form",
+        "formaction",
+        "formenctype",
+        "formmethod",
+        "formnovalidate",
+        "formtarget",
+        "height",
+        "list",
+        "max",
+        "maxlength",
+        "min",
+        "minlength",
+        "multiple",
+        "name",
+        "pattern",
+        "placeholder",
+        "popovertarget",
+        "popovertargetaction",
+        "readonly",
+        "required",
+        "size",
+        "src",
+        "step",
+        "type",
+        "value",
+        "width"
+      ],
+      "interface": "HTMLInputElement",
+      "url": "https://html.spec.whatwg.org/multipage/input.html#the-input-element"
+    },
+    {
+      "name": "ins",
+      "tags": [
+        "ins"
+      ],
+      "description": "An addition to the document",
+      "categories": [
+        "flow",
+        "phrasing*",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "transparent",
+      "attributes": [
+        "globals",
+        "cite",
+        "datetime"
+      ],
+      "interface": "HTMLModElement",
+      "url": "https://html.spec.whatwg.org/multipage/edits.html#the-ins-element"
+    },
+    {
+      "name": "kbd",
+      "tags": [
+        "kbd"
+      ],
+      "description": "User input",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-kbd-element"
+    },
+    {
+      "name": "label",
+      "tags": [
+        "label"
+      ],
+      "description": "Caption for a form control",
+      "categories": [
+        "flow",
+        "phrasing",
+        "interactive",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing*",
+      "attributes": [
+        "globals",
+        "for"
+      ],
+      "interface": "HTMLLabelElement",
+      "url": "https://html.spec.whatwg.org/multipage/forms.html#the-label-element"
+    },
+    {
+      "name": "legend",
+      "tags": [
+        "legend"
+      ],
+      "description": "Caption for fieldset",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "fieldset",
+        "optgroup"
+      ],
+      "content": "phrasing*; heading content",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLLegendElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element"
+    },
+    {
+      "name": "li",
+      "tags": [
+        "li"
+      ],
+      "description": "List item",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "ol",
+        "ul",
+        "menu*"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals",
+        "value*"
+      ],
+      "interface": "HTMLLIElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element"
+    },
+    {
+      "name": "link",
+      "tags": [
+        "link"
+      ],
+      "description": "Link metadata",
+      "categories": [
+        "metadata",
+        "flow*",
+        "phrasing*"
+      ],
+      "parents": [
+        "head",
+        "noscript*",
+        "phrasing*"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "href",
+        "crossorigin",
+        "rel",
+        "as",
+        "media",
+        "hreflang",
+        "type",
+        "sizes",
+        "imagesrcset",
+        "imagesizes",
+        "referrerpolicy",
+        "integrity",
+        "blocking",
+        "color",
+        "disabled",
+        "fetchpriority"
+      ],
+      "interface": "HTMLLinkElement",
+      "url": "https://html.spec.whatwg.org/multipage/semantics.html#the-link-element"
+    },
+    {
+      "name": "main",
+      "tags": [
+        "main"
+      ],
+      "description": "Container for the dominant contents of the document",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow*"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element"
+    },
+    {
+      "name": "map",
+      "tags": [
+        "map"
+      ],
+      "description": "Image map",
+      "categories": [
+        "flow",
+        "phrasing*",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "transparent; area*",
+      "attributes": [
+        "globals",
+        "name"
+      ],
+      "interface": "HTMLMapElement",
+      "url": "https://html.spec.whatwg.org/multipage/image-maps.html#the-map-element"
+    },
+    {
+      "name": "mark",
+      "tags": [
+        "mark"
+      ],
+      "description": "Highlight",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element"
+    },
+    {
+      "name": "MathML math",
+      "tags": [
+        "math"
+      ],
+      "description": "MathML root",
+      "categories": [
+        "flow",
+        "phrasing",
+        "embedded",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "per [MATHML]",
+      "attributes": [
+        "per [MATHML]"
+      ],
+      "interface": "Element",
+      "url": "https://w3c.github.io/mathml-core/#the-top-level-math-element"
+    },
+    {
+      "name": "menu",
+      "tags": [
+        "menu"
+      ],
+      "description": "Menu of commands",
+      "categories": [
+        "flow",
+        "palpable*"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "li; script-supporting elements",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLMenuElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-menu-element"
+    },
+    {
+      "name": "meta",
+      "tags": [
+        "meta"
+      ],
+      "description": "Text metadata",
+      "categories": [
+        "metadata",
+        "flow*",
+        "phrasing*"
+      ],
+      "parents": [
+        "head",
+        "noscript*",
+        "phrasing*"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "name",
+        "http-equiv",
+        "content",
+        "charset",
+        "media"
+      ],
+      "interface": "HTMLMetaElement",
+      "url": "https://html.spec.whatwg.org/multipage/semantics.html#the-meta-element"
+    },
+    {
+      "name": "meter",
+      "tags": [
+        "meter"
+      ],
+      "description": "Gauge",
+      "categories": [
+        "flow",
+        "phrasing",
+        "labelable",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing*",
+      "attributes": [
+        "globals",
+        "value",
+        "min",
+        "max",
+        "low",
+        "high",
+        "optimum"
+      ],
+      "interface": "HTMLMeterElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element"
+    },
+    {
+      "name": "nav",
+      "tags": [
+        "nav"
+      ],
+      "description": "Section with navigational links",
+      "categories": [
+        "flow",
+        "sectioning",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/sections.html#the-nav-element"
+    },
+    {
+      "name": "noscript",
+      "tags": [
+        "noscript"
+      ],
+      "description": "Fallback content for script",
+      "categories": [
+        "metadata",
+        "flow",
+        "phrasing"
+      ],
+      "parents": [
+        "head*",
+        "phrasing*",
+        "select",
+        "optgroup"
+      ],
+      "content": "varies*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element"
+    },
+    {
+      "name": "object",
+      "tags": [
+        "object"
+      ],
+      "description": "Image, child navigable, or plugin",
+      "categories": [
+        "flow",
+        "phrasing",
+        "embedded",
+        "interactive*",
+        "listed",
+        "form-associated",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "transparent",
+      "attributes": [
+        "globals",
+        "data",
+        "type",
+        "name",
+        "form",
+        "width",
+        "height"
+      ],
+      "interface": "HTMLObjectElement",
+      "url": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element"
+    },
+    {
+      "name": "ol",
+      "tags": [
+        "ol"
+      ],
+      "description": "Ordered list",
+      "categories": [
+        "flow",
+        "palpable*"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "li; script-supporting elements",
+      "attributes": [
+        "globals",
+        "reversed",
+        "start",
+        "type"
+      ],
+      "interface": "HTMLOListElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element"
+    },
+    {
+      "name": "optgroup",
+      "tags": [
+        "optgroup"
+      ],
+      "description": "Group of options in a list box",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "select",
+        "div*"
+      ],
+      "content": "option*; script-supporting elements*; noscript*; div*; legend*",
+      "attributes": [
+        "globals",
+        "disabled",
+        "label"
+      ],
+      "interface": "HTMLOptGroupElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element"
+    },
+    {
+      "name": "option",
+      "tags": [
+        "option"
+      ],
+      "description": "Option in a list box or combo box control",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "select",
+        "datalist",
+        "optgroup",
+        "div*"
+      ],
+      "content": "text*; div*; phrasing*",
+      "attributes": [
+        "globals",
+        "disabled",
+        "label",
+        "selected",
+        "value"
+      ],
+      "interface": "HTMLOptionElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element"
+    },
+    {
+      "name": "output",
+      "tags": [
+        "output"
+      ],
+      "description": "Calculated output value",
+      "categories": [
+        "flow",
+        "phrasing",
+        "listed",
+        "labelable",
+        "resettable",
+        "form-associated",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals",
+        "for",
+        "form",
+        "name"
+      ],
+      "interface": "HTMLOutputElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element"
+    },
+    {
+      "name": "p",
+      "tags": [
+        "p"
+      ],
+      "description": "Paragraph",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLParagraphElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element"
+    },
+    {
+      "name": "picture",
+      "tags": [
+        "picture"
+      ],
+      "description": "Image",
+      "categories": [
+        "flow",
+        "phrasing",
+        "embedded",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "source*; one img; script-supporting elements",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLPictureElement",
+      "url": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element"
+    },
+    {
+      "name": "pre",
+      "tags": [
+        "pre"
+      ],
+      "description": "Block of preformatted text",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLPreElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-element"
+    },
+    {
+      "name": "progress",
+      "tags": [
+        "progress"
+      ],
+      "description": "Progress bar",
+      "categories": [
+        "flow",
+        "phrasing",
+        "labelable",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing*",
+      "attributes": [
+        "globals",
+        "value",
+        "max"
+      ],
+      "interface": "HTMLProgressElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element"
+    },
+    {
+      "name": "q",
+      "tags": [
+        "q"
+      ],
+      "description": "Quotation",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals",
+        "cite"
+      ],
+      "interface": "HTMLQuoteElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element"
+    },
+    {
+      "name": "rp",
+      "tags": [
+        "rp"
+      ],
+      "description": "Parenthesis for ruby annotation text",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "ruby"
+      ],
+      "content": "text",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rp-element"
+    },
+    {
+      "name": "rt",
+      "tags": [
+        "rt"
+      ],
+      "description": "Ruby annotation text",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "ruby"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rt-element"
+    },
+    {
+      "name": "ruby",
+      "tags": [
+        "ruby"
+      ],
+      "description": "Ruby annotation(s)",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing; rt; rp*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"
+    },
+    {
+      "name": "s",
+      "tags": [
+        "s"
+      ],
+      "description": "Inaccurate text",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-s-element"
+    },
+    {
+      "name": "samp",
+      "tags": [
+        "samp"
+      ],
+      "description": "Computer output",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-samp-element"
+    },
+    {
+      "name": "script",
+      "tags": [
+        "script"
+      ],
+      "description": "Embedded script",
+      "categories": [
+        "metadata",
+        "flow",
+        "phrasing",
+        "script-supporting"
+      ],
+      "parents": [
+        "head",
+        "phrasing",
+        "script-supporting"
+      ],
+      "content": "script, data, or script documentation*",
+      "attributes": [
+        "globals",
+        "src",
+        "type",
+        "nomodule",
+        "async",
+        "defer",
+        "crossorigin",
+        "integrity",
+        "referrerpolicy",
+        "blocking",
+        "fetchpriority"
+      ],
+      "interface": "HTMLScriptElement",
+      "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-script-element"
+    },
+    {
+      "name": "search",
+      "tags": [
+        "search"
+      ],
+      "description": "Container for search controls",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element"
+    },
+    {
+      "name": "section",
+      "tags": [
+        "section"
+      ],
+      "description": "Generic document or application section",
+      "categories": [
+        "flow",
+        "sectioning",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/sections.html#the-section-element"
+    },
+    {
+      "name": "select",
+      "tags": [
+        "select"
+      ],
+      "description": "List box control",
+      "categories": [
+        "flow",
+        "phrasing",
+        "interactive",
+        "listed",
+        "labelable",
+        "submittable",
+        "resettable",
+        "form-associated",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "option*; optgroup*; hr*; script-supporting elements*; noscript*; div*; button*",
+      "attributes": [
+        "globals",
+        "autocomplete",
+        "disabled",
+        "form",
+        "multiple",
+        "name",
+        "required",
+        "size"
+      ],
+      "interface": "HTMLSelectElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element"
+    },
+    {
+      "name": "selectedcontent",
+      "tags": [
+        "selectedcontent"
+      ],
+      "description": "Mirrors content from an option",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "button"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLSelectedContentElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element"
+    },
+    {
+      "name": "slot",
+      "tags": [
+        "slot"
+      ],
+      "description": "Shadow tree slot",
+      "categories": [
+        "flow",
+        "phrasing"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "transparent",
+      "attributes": [
+        "globals",
+        "name"
+      ],
+      "interface": "HTMLSlotElement",
+      "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element"
+    },
+    {
+      "name": "small",
+      "tags": [
+        "small"
+      ],
+      "description": "Side comment",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element"
+    },
+    {
+      "name": "source",
+      "tags": [
+        "source"
+      ],
+      "description": "Image source for img or media source for video or audio",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "picture",
+        "video",
+        "audio"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "type",
+        "media",
+        "src",
+        "srcset",
+        "sizes",
+        "width",
+        "height"
+      ],
+      "interface": "HTMLSourceElement",
+      "url": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element"
+    },
+    {
+      "name": "span",
+      "tags": [
+        "span"
+      ],
+      "description": "Generic phrasing container",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLSpanElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element"
+    },
+    {
+      "name": "strong",
+      "tags": [
+        "strong"
+      ],
+      "description": "Importance",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element"
+    },
+    {
+      "name": "style",
+      "tags": [
+        "style"
+      ],
+      "description": "Embedded styling information",
+      "categories": [
+        "metadata",
+        "flow"
+      ],
+      "parents": [
+        "head",
+        "noscript*",
+        "flow*"
+      ],
+      "content": "text*",
+      "attributes": [
+        "globals",
+        "media",
+        "blocking"
+      ],
+      "interface": "HTMLStyleElement",
+      "url": "https://html.spec.whatwg.org/multipage/semantics.html#the-style-element"
+    },
+    {
+      "name": "sub",
+      "tags": [
+        "sub"
+      ],
+      "description": "Subscript",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements"
+    },
+    {
+      "name": "summary",
+      "tags": [
+        "summary"
+      ],
+      "description": "Caption for details",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "details"
+      ],
+      "content": "phrasing; heading content",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element"
+    },
+    {
+      "name": "sup",
+      "tags": [
+        "sup"
+      ],
+      "description": "Superscript",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements"
+    },
+    {
+      "name": "SVG svg",
+      "tags": [
+        "svg"
+      ],
+      "description": "SVG root",
+      "categories": [
+        "flow",
+        "phrasing",
+        "embedded",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "per [SVG]",
+      "attributes": [
+        "per [SVG]"
+      ],
+      "interface": "SVGSVGElement",
+      "url": "https://w3c.github.io/svgwg/svg2-draft/struct.html#elementdef-svg"
+    },
+    {
+      "name": "table",
+      "tags": [
+        "table"
+      ],
+      "description": "Table",
+      "categories": [
+        "flow",
+        "palpable"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "caption*; colgroup*; thead*; tbody*; tfoot*; tr*; script-supporting elements",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLTableElement",
+      "url": "https://html.spec.whatwg.org/multipage/tables.html#the-table-element"
+    },
+    {
+      "name": "tbody",
+      "tags": [
+        "tbody"
+      ],
+      "description": "Group of rows in a table",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "table"
+      ],
+      "content": "tr; script-supporting elements",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLTableSectionElement",
+      "url": "https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element"
+    },
+    {
+      "name": "td",
+      "tags": [
+        "td"
+      ],
+      "description": "Table cell",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "tr"
+      ],
+      "content": "flow",
+      "attributes": [
+        "globals",
+        "colspan",
+        "rowspan",
+        "headers"
+      ],
+      "interface": "HTMLTableCellElement",
+      "url": "https://html.spec.whatwg.org/multipage/tables.html#the-td-element"
+    },
+    {
+      "name": "template",
+      "tags": [
+        "template"
+      ],
+      "description": "Template",
+      "categories": [
+        "metadata",
+        "flow",
+        "phrasing",
+        "script-supporting"
+      ],
+      "parents": [
+        "metadata",
+        "phrasing",
+        "script-supporting",
+        "colgroup*"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "for",
+        "shadowrootmode",
+        "shadowrootdelegatesfocus",
+        "shadowrootserializable",
+        "shadowrootslotassignment",
+        "shadowrootclonable",
+        "shadowrootcustomelementregistry"
+      ],
+      "interface": "HTMLTemplateElement",
+      "url": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"
+    },
+    {
+      "name": "textarea",
+      "tags": [
+        "textarea"
+      ],
+      "description": "Multiline text controls",
+      "categories": [
+        "flow",
+        "phrasing",
+        "interactive",
+        "listed",
+        "labelable",
+        "submittable",
+        "resettable",
+        "form-associated",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "text",
+      "attributes": [
+        "globals",
+        "autocomplete",
+        "cols",
+        "dirname",
+        "disabled",
+        "form",
+        "maxlength",
+        "minlength",
+        "name",
+        "placeholder",
+        "readonly",
+        "required",
+        "rows",
+        "wrap"
+      ],
+      "interface": "HTMLTextAreaElement",
+      "url": "https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element"
+    },
+    {
+      "name": "tfoot",
+      "tags": [
+        "tfoot"
+      ],
+      "description": "Group of footer rows in a table",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "table"
+      ],
+      "content": "tr; script-supporting elements",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLTableSectionElement",
+      "url": "https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element"
+    },
+    {
+      "name": "th",
+      "tags": [
+        "th"
+      ],
+      "description": "Table header cell",
+      "categories": [
+        "interactive*"
+      ],
+      "parents": [
+        "tr"
+      ],
+      "content": "flow*",
+      "attributes": [
+        "globals",
+        "colspan",
+        "rowspan",
+        "headers",
+        "scope",
+        "abbr"
+      ],
+      "interface": "HTMLTableCellElement",
+      "url": "https://html.spec.whatwg.org/multipage/tables.html#the-th-element"
+    },
+    {
+      "name": "thead",
+      "tags": [
+        "thead"
+      ],
+      "description": "Group of heading rows in a table",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "table"
+      ],
+      "content": "tr; script-supporting elements",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLTableSectionElement",
+      "url": "https://html.spec.whatwg.org/multipage/tables.html#the-thead-element"
+    },
+    {
+      "name": "time",
+      "tags": [
+        "time"
+      ],
+      "description": "Machine-readable equivalent of date- or time-related data",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals",
+        "datetime"
+      ],
+      "interface": "HTMLTimeElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element"
+    },
+    {
+      "name": "title",
+      "tags": [
+        "title"
+      ],
+      "description": "Document title",
+      "categories": [
+        "metadata"
+      ],
+      "parents": [
+        "head"
+      ],
+      "content": "text*",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLTitleElement",
+      "url": "https://html.spec.whatwg.org/multipage/semantics.html#the-title-element"
+    },
+    {
+      "name": "tr",
+      "tags": [
+        "tr"
+      ],
+      "description": "Table row",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "table",
+        "thead",
+        "tbody",
+        "tfoot"
+      ],
+      "content": "th*; td; script-supporting elements",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLTableRowElement",
+      "url": "https://html.spec.whatwg.org/multipage/tables.html#the-tr-element"
+    },
+    {
+      "name": "track",
+      "tags": [
+        "track"
+      ],
+      "description": "Timed text track",
+      "categories": [
+        "none"
+      ],
+      "parents": [
+        "audio",
+        "video"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals",
+        "default",
+        "kind",
+        "label",
+        "src",
+        "srclang"
+      ],
+      "interface": "HTMLTrackElement",
+      "url": "https://html.spec.whatwg.org/multipage/media.html#the-track-element"
+    },
+    {
+      "name": "u",
+      "tags": [
+        "u"
+      ],
+      "description": "Unarticulated annotation",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element"
+    },
+    {
+      "name": "ul",
+      "tags": [
+        "ul"
+      ],
+      "description": "List",
+      "categories": [
+        "flow",
+        "palpable*"
+      ],
+      "parents": [
+        "flow"
+      ],
+      "content": "li; script-supporting elements",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLUListElement",
+      "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element"
+    },
+    {
+      "name": "var",
+      "tags": [
+        "var"
+      ],
+      "description": "Variable",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "phrasing",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-var-element"
+    },
+    {
+      "name": "video",
+      "tags": [
+        "video"
+      ],
+      "description": "Video player",
+      "categories": [
+        "flow",
+        "phrasing",
+        "embedded",
+        "interactive",
+        "palpable"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "source*; track*; transparent*",
+      "attributes": [
+        "globals",
+        "src",
+        "crossorigin",
+        "poster",
+        "preload",
+        "autoplay",
+        "playsinline",
+        "loading",
+        "loop",
+        "muted",
+        "controls",
+        "width",
+        "height"
+      ],
+      "interface": "HTMLVideoElement",
+      "url": "https://html.spec.whatwg.org/multipage/media.html#the-video-element"
+    },
+    {
+      "name": "wbr",
+      "tags": [
+        "wbr"
+      ],
+      "description": "Line breaking opportunity",
+      "categories": [
+        "flow",
+        "phrasing"
+      ],
+      "parents": [
+        "phrasing"
+      ],
+      "content": "empty",
+      "attributes": [
+        "globals"
+      ],
+      "interface": "HTMLElement",
+      "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-wbr-element"
+    },
+    {
+      "name": "autonomous custom elements",
+      "tags": [],
+      "description": "Author-defined elements",
+      "categories": [
+        "flow",
+        "phrasing",
+        "palpable"
+      ],
+      "parents": [
+        "flow",
+        "phrasing"
+      ],
+      "content": "transparent",
+      "attributes": [
+        "globals",
+        "any, as decided by the element's author"
+      ],
+      "interface": "Supplied by the element's author (inherits from HTMLElement)",
+      "url": "https://html.spec.whatwg.org/multipage/custom-elements.html#autonomous-custom-element"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "abbr",
+      "appliesTo": [
+        "th"
+      ],
+      "global": false,
+      "description": "Alternative label to use for the header cell when referencing the cell in other contexts",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "accept",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "Hint for expected file type in file upload controls",
+      "value": "Set of comma-separated tokens* consisting of valid MIME type strings with no parameters or audio/*, video/*, or image/*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "accept-charset",
+      "appliesTo": [
+        "form"
+      ],
+      "global": false,
+      "description": "Character encodings to use for form submission",
+      "value": "ASCII case-insensitive match for \"UTF-8\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "accesskey",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Keyboard shortcut to activate or focus element",
+      "value": "Ordered set of unique space-separated tokens, none of which are identical to another, each consisting of one code point in length",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "action",
+      "appliesTo": [
+        "form"
+      ],
+      "global": false,
+      "description": "URL to use for form submission",
+      "value": "Valid non-empty URL potentially surrounded by spaces",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "allow",
+      "appliesTo": [
+        "iframe"
+      ],
+      "global": false,
+      "description": "Permissions policy to be applied to the iframe's contents",
+      "value": "Serialized permissions policy",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "allowfullscreen",
+      "appliesTo": [
+        "iframe"
+      ],
+      "global": false,
+      "description": "Whether to allow the iframe's contents to use requestFullscreen()",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "alpha",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "Allow the color's alpha component to be set",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "alt",
+      "appliesTo": [
+        "area",
+        "img",
+        "input"
+      ],
+      "global": false,
+      "description": "Replacement text for use when images are not available",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "as",
+      "appliesTo": [
+        "link"
+      ],
+      "global": false,
+      "description": "Destination for a preload request (for rel=\"preload\" and rel=\"modulepreload\")",
+      "value": "Preload destination, for rel=\"preload\"; module preload destination, for rel=\"modulepreload\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "async",
+      "appliesTo": [
+        "script"
+      ],
+      "global": false,
+      "description": "Execute script when available, without blocking while fetching",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "autocapitalize",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Recommended autocapitalization behavior (for supported input methods)",
+      "value": "\"on\"; \"off\"; \"none\"; \"sentences\"; \"words\"; \"characters\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "autocomplete",
+      "appliesTo": [
+        "form"
+      ],
+      "global": false,
+      "description": "Default setting for autofill feature for controls in the form",
+      "value": "\"on\"; \"off\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "autocomplete",
+      "appliesTo": [
+        "input",
+        "select",
+        "textarea"
+      ],
+      "global": false,
+      "description": "Hint for form autofill feature",
+      "value": "Autofill field name and related tokens*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "autocorrect",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Recommended autocorrection behavior (for supported input methods)",
+      "value": "\"on\"; \"off\"; the empty string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "autofocus",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Automatically focus the element when the page is loaded",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "autoplay",
+      "appliesTo": [
+        "audio",
+        "video"
+      ],
+      "global": false,
+      "description": "Hint that the media resource can be started automatically when the page is loaded",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "blocking",
+      "appliesTo": [
+        "link",
+        "script",
+        "style"
+      ],
+      "global": false,
+      "description": "Whether the element is potentially render-blocking",
+      "value": "Unordered set of unique space-separated tokens*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "charset",
+      "appliesTo": [
+        "meta"
+      ],
+      "global": false,
+      "description": "Character encoding declaration",
+      "value": "\"utf-8\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "checked",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "Whether the control is checked",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "cite",
+      "appliesTo": [
+        "blockquote",
+        "del",
+        "ins",
+        "q"
+      ],
+      "global": false,
+      "description": "Link to the source of the quotation or more information about the edit",
+      "value": "Valid URL potentially surrounded by spaces",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "class",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Classes to which the element belongs",
+      "value": "Set of space-separated tokens",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "closedby",
+      "appliesTo": [
+        "dialog"
+      ],
+      "global": false,
+      "description": "Which user actions will close the dialog",
+      "value": "\"any\"; \"closerequest\"; \"none\";",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "color",
+      "appliesTo": [
+        "link"
+      ],
+      "global": false,
+      "description": "Color to use when customizing a site's icon (for rel=\"mask-icon\")",
+      "value": "CSS <color>",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "colorspace",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "The color space of the serialized color",
+      "value": "\"limited-srgb\"; \"display-p3\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "cols",
+      "appliesTo": [
+        "textarea"
+      ],
+      "global": false,
+      "description": "Maximum number of characters per line",
+      "value": "Valid non-negative integer greater than zero",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "colspan",
+      "appliesTo": [
+        "td",
+        "th"
+      ],
+      "global": false,
+      "description": "Number of columns that the cell is to span",
+      "value": "Valid non-negative integer greater than zero",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "command",
+      "appliesTo": [
+        "button"
+      ],
+      "global": false,
+      "description": "Indicates to the targeted element which action to take.",
+      "value": "\"toggle-popover\"; \"show-popover\"; \"hide-popover\"; \"close\"; \"request-close\"; \"show-modal\"; a custom command keyword",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "commandfor",
+      "appliesTo": [
+        "button"
+      ],
+      "global": false,
+      "description": "Targets another element to be invoked.",
+      "value": "ID*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "content",
+      "appliesTo": [
+        "meta"
+      ],
+      "global": false,
+      "description": "Value of the element",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "contenteditable",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Whether the element is editable",
+      "value": "\"true\"; \"false\"; \"plaintext-only\"; the empty string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "controls",
+      "appliesTo": [
+        "audio",
+        "video img"
+      ],
+      "global": false,
+      "description": "Show user agent controls",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "coords",
+      "appliesTo": [
+        "area"
+      ],
+      "global": false,
+      "description": "Coordinates for the shape to be created in an image map",
+      "value": "Valid list of floating-point numbers*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "crossorigin",
+      "appliesTo": [
+        "audio",
+        "img",
+        "link",
+        "script",
+        "video"
+      ],
+      "global": false,
+      "description": "How the element handles crossorigin requests",
+      "value": "\"anonymous\"; \"use-credentials\"; the empty string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "data",
+      "appliesTo": [
+        "object"
+      ],
+      "global": false,
+      "description": "Address of the resource",
+      "value": "Valid non-empty URL potentially surrounded by spaces",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "datetime",
+      "appliesTo": [
+        "del",
+        "ins"
+      ],
+      "global": false,
+      "description": "Date and (optionally) time of the change",
+      "value": "Valid date string with optional time",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "datetime",
+      "appliesTo": [
+        "time"
+      ],
+      "global": false,
+      "description": "Machine-readable value",
+      "value": "Valid month string, valid date string, valid yearless date string, valid time string, valid local date and time string, valid time-zone offset string, valid global date and time string, valid week string, valid non-negative integer, or valid duration string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "decoding",
+      "appliesTo": [
+        "img"
+      ],
+      "global": false,
+      "description": "Decoding hint to use when processing this image for presentation",
+      "value": "\"sync\"; \"async\"; \"auto\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "default",
+      "appliesTo": [
+        "track"
+      ],
+      "global": false,
+      "description": "Enable the track if no other text track is more suitable",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "defer",
+      "appliesTo": [
+        "script"
+      ],
+      "global": false,
+      "description": "Defer script execution",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "dir",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "The text directionality of the element",
+      "value": "\"ltr\"; \"rtl\"; \"auto\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "dir",
+      "appliesTo": [
+        "bdo"
+      ],
+      "global": false,
+      "description": "The text directionality of the element",
+      "value": "\"ltr\"; \"rtl\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "dirname",
+      "appliesTo": [
+        "input",
+        "textarea"
+      ],
+      "global": false,
+      "description": "Name of form control to use for sending the element's directionality in form submission",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "disabled",
+      "appliesTo": [
+        "button",
+        "input",
+        "optgroup",
+        "option",
+        "select",
+        "textarea",
+        "form-associated custom elements"
+      ],
+      "global": false,
+      "description": "Whether the form control is disabled",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "disabled",
+      "appliesTo": [
+        "fieldset"
+      ],
+      "global": false,
+      "description": "Whether the descendant form controls, except any inside legend, are disabled",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "disabled",
+      "appliesTo": [
+        "link"
+      ],
+      "global": false,
+      "description": "Whether the link is disabled",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "download",
+      "appliesTo": [
+        "a",
+        "area"
+      ],
+      "global": false,
+      "description": "Whether to download the resource instead of navigating to it, and its filename if so",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "draggable",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Whether the element is draggable",
+      "value": "\"true\"; \"false\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "enctype",
+      "appliesTo": [
+        "form"
+      ],
+      "global": false,
+      "description": "Entry list encoding type to use for form submission",
+      "value": "\"application/x-www-form-urlencoded\"; \"multipart/form-data\"; \"text/plain\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "enterkeyhint",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Hint for selecting an enter key action",
+      "value": "\"enter\"; \"done\"; \"go\"; \"next\"; \"previous\"; \"search\"; \"send\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "fetchpriority",
+      "appliesTo": [
+        "img",
+        "link",
+        "script"
+      ],
+      "global": false,
+      "description": "Sets the priority for fetches initiated by the element",
+      "value": "\"auto\"; \"high\"; \"low\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "for",
+      "appliesTo": [
+        "label"
+      ],
+      "global": false,
+      "description": "Associate the label with form control",
+      "value": "ID*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "for",
+      "appliesTo": [
+        "output"
+      ],
+      "global": false,
+      "description": "Specifies controls from which the output was calculated",
+      "value": "Unordered set of unique space-separated tokens consisting of IDs*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "for",
+      "appliesTo": [
+        "template"
+      ],
+      "global": false,
+      "description": "Updates existing content",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "form",
+      "appliesTo": [
+        "button",
+        "fieldset",
+        "input",
+        "object",
+        "output",
+        "select",
+        "textarea",
+        "form-associated custom elements"
+      ],
+      "global": false,
+      "description": "Associates the element with a form element",
+      "value": "ID*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "formaction",
+      "appliesTo": [
+        "button",
+        "input"
+      ],
+      "global": false,
+      "description": "URL to use for form submission",
+      "value": "Valid non-empty URL potentially surrounded by spaces",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "formenctype",
+      "appliesTo": [
+        "button",
+        "input"
+      ],
+      "global": false,
+      "description": "Entry list encoding type to use for form submission",
+      "value": "\"application/x-www-form-urlencoded\"; \"multipart/form-data\"; \"text/plain\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "formmethod",
+      "appliesTo": [
+        "button",
+        "input"
+      ],
+      "global": false,
+      "description": "Variant to use for form submission",
+      "value": "\"get\"; \"post\"; \"dialog\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "formnovalidate",
+      "appliesTo": [
+        "button",
+        "input"
+      ],
+      "global": false,
+      "description": "Bypass form control validation for form submission",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "formtarget",
+      "appliesTo": [
+        "button",
+        "input"
+      ],
+      "global": false,
+      "description": "Navigable for form submission",
+      "value": "Valid navigable target name or keyword",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "headers",
+      "appliesTo": [
+        "td",
+        "th"
+      ],
+      "global": false,
+      "description": "The header cells for this cell",
+      "value": "Unordered set of unique space-separated tokens consisting of IDs*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "headingoffset",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Offsets heading levels for descendants",
+      "value": "Valid non-negative integer between 0 and 8",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "headingreset",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Prevents a heading offset computation from traversing beyond the element with the attribute",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "height",
+      "appliesTo": [
+        "canvas",
+        "embed",
+        "iframe",
+        "img",
+        "input",
+        "object",
+        "source (in picture)",
+        "video"
+      ],
+      "global": false,
+      "description": "Vertical dimension",
+      "value": "Valid non-negative integer",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "hidden",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Whether the element is relevant",
+      "value": "\"until-found\"; \"hidden\"; the empty string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "high",
+      "appliesTo": [
+        "meter"
+      ],
+      "global": false,
+      "description": "Low limit of high range",
+      "value": "Valid floating-point number*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "href",
+      "appliesTo": [
+        "a",
+        "area"
+      ],
+      "global": false,
+      "description": "Address of the hyperlink",
+      "value": "Valid URL potentially surrounded by spaces",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "href",
+      "appliesTo": [
+        "link"
+      ],
+      "global": false,
+      "description": "Address of the hyperlink",
+      "value": "Valid non-empty URL potentially surrounded by spaces",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "href",
+      "appliesTo": [
+        "base"
+      ],
+      "global": false,
+      "description": "Document base URL",
+      "value": "Valid URL potentially surrounded by spaces",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "hreflang",
+      "appliesTo": [
+        "a",
+        "link"
+      ],
+      "global": false,
+      "description": "Language of the linked resource",
+      "value": "Valid BCP 47 language tag",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "http-equiv",
+      "appliesTo": [
+        "meta"
+      ],
+      "global": false,
+      "description": "Pragma directive",
+      "value": "\"content-type\"; \"default-style\"; \"refresh\"; \"x-ua-compatible\"; \"content-security-policy\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "id",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "The element's ID",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "imagesizes",
+      "appliesTo": [
+        "link"
+      ],
+      "global": false,
+      "description": "Image sizes for different page layouts (for rel=\"preload\")",
+      "value": "Valid source size list",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "imagesrcset",
+      "appliesTo": [
+        "link"
+      ],
+      "global": false,
+      "description": "Images to use in different situations, e.g., high-resolution displays, small monitors, etc. (for rel=\"preload\")",
+      "value": "Comma-separated list of image candidate strings",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "inert",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Whether the element is inert.",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "inputmode",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Hint for selecting an input modality",
+      "value": "\"none\"; \"text\"; \"tel\"; \"email\"; \"url\"; \"numeric\"; \"decimal\"; \"search\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "integrity",
+      "appliesTo": [
+        "link",
+        "script"
+      ],
+      "global": false,
+      "description": "Integrity metadata used in Subresource Integrity checks [SRI]",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "is",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Creates a customized built-in element",
+      "value": "Valid custom element name of a defined customized built-in element",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ismap",
+      "appliesTo": [
+        "img"
+      ],
+      "global": false,
+      "description": "Whether the image is a server-side image map",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "itemid",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Global identifier for a microdata item",
+      "value": "Valid URL potentially surrounded by spaces",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "itemprop",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Property names of a microdata item",
+      "value": "Unordered set of unique space-separated tokens consisting of valid absolute URLs, defined property names, or text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "itemref",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Referenced elements",
+      "value": "Unordered set of unique space-separated tokens consisting of IDs*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "itemscope",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Introduces a microdata item",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "itemtype",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Item types of a microdata item",
+      "value": "Unordered set of unique space-separated tokens consisting of valid absolute URLs*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "kind",
+      "appliesTo": [
+        "track"
+      ],
+      "global": false,
+      "description": "The type of text track",
+      "value": "\"subtitles\"; \"captions\"; \"descriptions\"; \"chapters\"; \"metadata\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "label",
+      "appliesTo": [
+        "optgroup",
+        "option",
+        "track"
+      ],
+      "global": false,
+      "description": "User-visible label",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "lang",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Language of the element",
+      "value": "Valid BCP 47 language tag or the empty string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "list",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "List of autocomplete options",
+      "value": "ID*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "loading",
+      "appliesTo": [
+        "iframe",
+        "img",
+        "audio",
+        "video"
+      ],
+      "global": false,
+      "description": "Used when determining loading deferral",
+      "value": "\"lazy\"; \"eager\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "loop",
+      "appliesTo": [
+        "audio",
+        "video"
+      ],
+      "global": false,
+      "description": "Whether to loop the media resource",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "low",
+      "appliesTo": [
+        "meter"
+      ],
+      "global": false,
+      "description": "High limit of low range",
+      "value": "Valid floating-point number*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "max",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "Maximum value",
+      "value": "Varies*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "max",
+      "appliesTo": [
+        "meter",
+        "progress"
+      ],
+      "global": false,
+      "description": "Upper bound of range",
+      "value": "Valid floating-point number*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "maxlength",
+      "appliesTo": [
+        "input",
+        "textarea"
+      ],
+      "global": false,
+      "description": "Maximum length of value",
+      "value": "Valid non-negative integer",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "media",
+      "appliesTo": [
+        "link",
+        "meta",
+        "source",
+        "style"
+      ],
+      "global": false,
+      "description": "Applicable media",
+      "value": "Valid media query list",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "method",
+      "appliesTo": [
+        "form"
+      ],
+      "global": false,
+      "description": "Variant to use for form submission",
+      "value": "\"get\"; \"post\"; \"dialog\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "min",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "Minimum value",
+      "value": "Varies*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "min",
+      "appliesTo": [
+        "meter"
+      ],
+      "global": false,
+      "description": "Lower bound of range",
+      "value": "Valid floating-point number*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "minlength",
+      "appliesTo": [
+        "input",
+        "textarea"
+      ],
+      "global": false,
+      "description": "Minimum length of value",
+      "value": "Valid non-negative integer",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "multiple",
+      "appliesTo": [
+        "input",
+        "select"
+      ],
+      "global": false,
+      "description": "Whether to allow multiple values",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "muted",
+      "appliesTo": [
+        "audio",
+        "video"
+      ],
+      "global": false,
+      "description": "Whether to mute the media resource by default",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "name",
+      "appliesTo": [
+        "button",
+        "fieldset",
+        "input",
+        "output",
+        "select",
+        "textarea",
+        "form-associated custom elements"
+      ],
+      "global": false,
+      "description": "Name of the element to use for form submission and in the form.elements API",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "name",
+      "appliesTo": [
+        "details"
+      ],
+      "global": false,
+      "description": "Name of group of mutually-exclusive details elements",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "name",
+      "appliesTo": [
+        "form"
+      ],
+      "global": false,
+      "description": "Name of form to use in the document.forms API",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "name",
+      "appliesTo": [
+        "iframe",
+        "object"
+      ],
+      "global": false,
+      "description": "Name of content navigable",
+      "value": "Valid navigable target name or keyword",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "name",
+      "appliesTo": [
+        "map"
+      ],
+      "global": false,
+      "description": "Name of image map to reference from the usemap attribute",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "name",
+      "appliesTo": [
+        "meta"
+      ],
+      "global": false,
+      "description": "Metadata name",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "name",
+      "appliesTo": [
+        "slot"
+      ],
+      "global": false,
+      "description": "Name of shadow tree slot",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "nomodule",
+      "appliesTo": [
+        "script"
+      ],
+      "global": false,
+      "description": "Prevents execution in user agents that support module scripts",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "nonce",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Cryptographic nonce used in Content Security Policy checks [CSP]",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "novalidate",
+      "appliesTo": [
+        "form"
+      ],
+      "global": false,
+      "description": "Bypass form control validation for form submission",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "open",
+      "appliesTo": [
+        "details"
+      ],
+      "global": false,
+      "description": "Whether the details are visible",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "open",
+      "appliesTo": [
+        "dialog"
+      ],
+      "global": false,
+      "description": "Whether the dialog box is showing",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "optimum",
+      "appliesTo": [
+        "meter"
+      ],
+      "global": false,
+      "description": "Optimum value in gauge",
+      "value": "Valid floating-point number*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "pattern",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "Pattern to be matched by the form control's value",
+      "value": "Regular expression matching the JavaScript Pattern production",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ping",
+      "appliesTo": [
+        "a",
+        "area"
+      ],
+      "global": false,
+      "description": "URLs to ping",
+      "value": "Set of space-separated tokens consisting of valid non-empty URLs",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "placeholder",
+      "appliesTo": [
+        "input",
+        "textarea"
+      ],
+      "global": false,
+      "description": "User-visible label to be placed within the form control",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "playsinline",
+      "appliesTo": [
+        "video"
+      ],
+      "global": false,
+      "description": "Encourage the user agent to display video content within the element's playback area",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "popover",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Makes the element a popover element",
+      "value": "\"auto\"; \"manual\"; \"hint\"; the empty string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "popovertarget",
+      "appliesTo": [
+        "button",
+        "input"
+      ],
+      "global": false,
+      "description": "Targets a popover element to toggle, show, or hide",
+      "value": "ID*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "popovertargetaction",
+      "appliesTo": [
+        "button",
+        "input"
+      ],
+      "global": false,
+      "description": "Indicates whether a targeted popover element is to be toggled, shown, or hidden",
+      "value": "\"toggle\"; \"show\"; \"hide\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "poster",
+      "appliesTo": [
+        "video"
+      ],
+      "global": false,
+      "description": "Poster frame to show prior to video playback",
+      "value": "Valid non-empty URL potentially surrounded by spaces",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "preload",
+      "appliesTo": [
+        "audio",
+        "video"
+      ],
+      "global": false,
+      "description": "Hints how much buffering the media resource will likely need",
+      "value": "\"none\"; \"metadata\"; \"auto\"; the empty string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "readonly",
+      "appliesTo": [
+        "input",
+        "textarea"
+      ],
+      "global": false,
+      "description": "Whether to allow the value to be edited by the user",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "readonly",
+      "appliesTo": [
+        "form-associated custom elements"
+      ],
+      "global": false,
+      "description": "Affects willValidate, plus any behavior added by the custom element author",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "referrerpolicy",
+      "appliesTo": [
+        "a",
+        "area",
+        "iframe",
+        "img",
+        "link",
+        "script"
+      ],
+      "global": false,
+      "description": "Referrer policy for fetches initiated by the element",
+      "value": "Referrer policy",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "rel",
+      "appliesTo": [
+        "a",
+        "area"
+      ],
+      "global": false,
+      "description": "Relationship between the location in the document containing the hyperlink and the destination resource",
+      "value": "Unordered set of unique space-separated tokens*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "rel",
+      "appliesTo": [
+        "link"
+      ],
+      "global": false,
+      "description": "Relationship between the document containing the hyperlink and the destination resource",
+      "value": "Unordered set of unique space-separated tokens*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "required",
+      "appliesTo": [
+        "input",
+        "select",
+        "textarea"
+      ],
+      "global": false,
+      "description": "Whether the control is required for form submission",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "reversed",
+      "appliesTo": [
+        "ol"
+      ],
+      "global": false,
+      "description": "Number the list backwards",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "rows",
+      "appliesTo": [
+        "textarea"
+      ],
+      "global": false,
+      "description": "Number of lines to show",
+      "value": "Valid non-negative integer greater than zero",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "rowspan",
+      "appliesTo": [
+        "td",
+        "th"
+      ],
+      "global": false,
+      "description": "Number of rows that the cell is to span",
+      "value": "Valid non-negative integer",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "sandbox",
+      "appliesTo": [
+        "iframe"
+      ],
+      "global": false,
+      "description": "Security rules for nested content",
+      "value": "Unordered set of unique space-separated tokens, ASCII case-insensitive, consisting of \"allow-downloads\"\"allow-forms\"\"allow-modals\"\"allow-orientation-lock\"\"allow-pointer-lock\"\"allow-popups\"\"allow-popups-to-escape-sandbox\"\"allow-presentation\"\"allow-same-origin\"\"allow-scripts\"\"allow-top-navigation\"\"allow-top-navigation-by-user-activation\"\"allow-top-navigation-to-custom-protocols\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "scope",
+      "appliesTo": [
+        "th"
+      ],
+      "global": false,
+      "description": "Specifies which cells the header cell applies to",
+      "value": "\"row\"; \"col\"; \"rowgroup\"; \"colgroup\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "selected",
+      "appliesTo": [
+        "option"
+      ],
+      "global": false,
+      "description": "Whether the option is selected by default",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "shadowrootclonable",
+      "appliesTo": [
+        "template"
+      ],
+      "global": false,
+      "description": "Sets clonable on a declarative shadow root",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "shadowrootcustomelementregistry",
+      "appliesTo": [
+        "template"
+      ],
+      "global": false,
+      "description": "Enables declarative shadow roots to indicate they will use a custom element registry",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "shadowrootdelegatesfocus",
+      "appliesTo": [
+        "template"
+      ],
+      "global": false,
+      "description": "Sets delegates focus on a declarative shadow root",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "shadowrootmode",
+      "appliesTo": [
+        "template"
+      ],
+      "global": false,
+      "description": "Enables streaming declarative shadow roots",
+      "value": "\"open\"; \"closed\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "shadowrootserializable",
+      "appliesTo": [
+        "template"
+      ],
+      "global": false,
+      "description": "Sets serializable on a declarative shadow root",
+      "value": "Boolean attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "shadowrootslotassignment",
+      "appliesTo": [
+        "template"
+      ],
+      "global": false,
+      "description": "Sets slot assignment on a declarative shadow root",
+      "value": "\"named\"; \"manual\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "shape",
+      "appliesTo": [
+        "area"
+      ],
+      "global": false,
+      "description": "The kind of shape to be created in an image map",
+      "value": "\"circle\"; \"default\"; \"poly\"; \"rect\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "size",
+      "appliesTo": [
+        "input",
+        "select"
+      ],
+      "global": false,
+      "description": "Size of the control",
+      "value": "Valid non-negative integer greater than zero",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "sizes",
+      "appliesTo": [
+        "link"
+      ],
+      "global": false,
+      "description": "Sizes of the icons (for rel=\"icon\")",
+      "value": "Unordered set of unique space-separated tokens, ASCII case-insensitive, consisting of sizes*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "sizes",
+      "appliesTo": [
+        "img",
+        "source"
+      ],
+      "global": false,
+      "description": "Image sizes for different page layouts",
+      "value": "Valid source size list",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "slot",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "The element's desired slot",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "span",
+      "appliesTo": [
+        "col",
+        "colgroup"
+      ],
+      "global": false,
+      "description": "Number of columns spanned by the element",
+      "value": "Valid non-negative integer greater than zero",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "spellcheck",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Whether the element is to have its spelling and grammar checked",
+      "value": "\"true\"; \"false\"; the empty string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "src",
+      "appliesTo": [
+        "audio",
+        "embed",
+        "iframe",
+        "img",
+        "input",
+        "script",
+        "source (in video or audio)",
+        "track",
+        "video"
+      ],
+      "global": false,
+      "description": "Address of the resource",
+      "value": "Valid non-empty URL potentially surrounded by spaces",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "srcdoc",
+      "appliesTo": [
+        "iframe"
+      ],
+      "global": false,
+      "description": "A document to render in the iframe",
+      "value": "The source of an iframe srcdoc document*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "srclang",
+      "appliesTo": [
+        "track"
+      ],
+      "global": false,
+      "description": "Language of the text track",
+      "value": "Valid BCP 47 language tag",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "srcset",
+      "appliesTo": [
+        "img",
+        "source"
+      ],
+      "global": false,
+      "description": "Images to use in different situations, e.g., high-resolution displays, small monitors, etc.",
+      "value": "Comma-separated list of image candidate strings",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "start",
+      "appliesTo": [
+        "ol"
+      ],
+      "global": false,
+      "description": "Starting value of the list",
+      "value": "Valid integer",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "step",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "Granularity to be matched by the form control's value",
+      "value": "Valid floating-point number greater than zero, or \"any\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "style",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Presentational and formatting instructions",
+      "value": "CSS declarations*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "tabindex",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation",
+      "value": "Valid integer",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "target",
+      "appliesTo": [
+        "a",
+        "area"
+      ],
+      "global": false,
+      "description": "Navigable for hyperlink navigation",
+      "value": "Valid navigable target name or keyword",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "target",
+      "appliesTo": [
+        "base"
+      ],
+      "global": false,
+      "description": "Default navigable for hyperlink navigation and form submission",
+      "value": "Valid navigable target name or keyword",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "target",
+      "appliesTo": [
+        "form"
+      ],
+      "global": false,
+      "description": "Navigable for form submission",
+      "value": "Valid navigable target name or keyword",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "title",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Advisory information for the element",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "title",
+      "appliesTo": [
+        "abbr",
+        "dfn"
+      ],
+      "global": false,
+      "description": "Full term or expansion of abbreviation",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "title",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "Description of pattern (when used with pattern attribute)",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "title",
+      "appliesTo": [
+        "link"
+      ],
+      "global": false,
+      "description": "Title of the link",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "title",
+      "appliesTo": [
+        "link",
+        "style"
+      ],
+      "global": false,
+      "description": "CSS style sheet set name",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "translate",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Whether the element is to be translated when the page is localized",
+      "value": "\"yes\"; \"no\"; the empty string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "type",
+      "appliesTo": [
+        "a",
+        "link"
+      ],
+      "global": false,
+      "description": "Hint for the type of the referenced resource",
+      "value": "Valid MIME type string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "type",
+      "appliesTo": [
+        "button"
+      ],
+      "global": false,
+      "description": "Type of button",
+      "value": "\"submit\"; \"reset\"; \"button\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "type",
+      "appliesTo": [
+        "embed",
+        "object",
+        "source"
+      ],
+      "global": false,
+      "description": "Type of embedded resource",
+      "value": "Valid MIME type string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "type",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "Type of form control",
+      "value": "input type keyword",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "type",
+      "appliesTo": [
+        "ol"
+      ],
+      "global": false,
+      "description": "Kind of list marker",
+      "value": "\"1\"; \"a\"; \"A\"; \"i\"; \"I\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "type",
+      "appliesTo": [
+        "script"
+      ],
+      "global": false,
+      "description": "Type of script",
+      "value": "\"module\"; \"importmap\"; \"speculationrules\"; a valid MIME type string that is not a JavaScript MIME type essence match",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "usemap",
+      "appliesTo": [
+        "img"
+      ],
+      "global": false,
+      "description": "Name of image map to use",
+      "value": "Valid hash-name reference*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "value",
+      "appliesTo": [
+        "button",
+        "option"
+      ],
+      "global": false,
+      "description": "Value to be used for form submission",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "value",
+      "appliesTo": [
+        "data"
+      ],
+      "global": false,
+      "description": "Machine-readable value",
+      "value": "Text*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "value",
+      "appliesTo": [
+        "input"
+      ],
+      "global": false,
+      "description": "Value of the form control",
+      "value": "Varies*",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "value",
+      "appliesTo": [
+        "li"
+      ],
+      "global": false,
+      "description": "Ordinal value of the list item",
+      "value": "Valid integer",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "value",
+      "appliesTo": [
+        "meter",
+        "progress"
+      ],
+      "global": false,
+      "description": "Current value of the element",
+      "value": "Valid floating-point number",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "width",
+      "appliesTo": [
+        "canvas",
+        "embed",
+        "iframe",
+        "img",
+        "input",
+        "object",
+        "source (in picture)",
+        "video"
+      ],
+      "global": false,
+      "description": "Horizontal dimension",
+      "value": "Valid non-negative integer",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "wrap",
+      "appliesTo": [
+        "textarea"
+      ],
+      "global": false,
+      "description": "How the value of the form control is to be wrapped for form submission",
+      "value": "\"soft\"; \"hard\"",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "writingsuggestions",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Whether the element can offer writing suggestions or not.",
+      "value": "\"true\"; \"false\"; the empty string",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onafterprint",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "afterprint event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onauxclick",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "auxclick event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onbeforeinput",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "beforeinput event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onbeforematch",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "beforematch event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onbeforeprint",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "beforeprint event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onbeforeunload",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "beforeunload event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onbeforetoggle",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "beforetoggle event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onblur",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "blur event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oncancel",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "cancel event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oncanplay",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "canplay event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oncanplaythrough",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "canplaythrough event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onchange",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "change event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onclick",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "click event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onclose",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "close event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oncommand",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "command event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oncontextlost",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "contextlost event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oncontextmenu",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "contextmenu event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oncontextrestored",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "contextrestored event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oncopy",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "copy event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oncuechange",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "cuechange event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oncut",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "cut event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ondblclick",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "dblclick event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ondrag",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "drag event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ondragend",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "dragend event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ondragenter",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "dragenter event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ondragleave",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "dragleave event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ondragover",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "dragover event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ondragstart",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "dragstart event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ondrop",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "drop event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ondurationchange",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "durationchange event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onemptied",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "emptied event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onended",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "ended event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onerror",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "error event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onfocus",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "focus event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onformdata",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "formdata event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onhashchange",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "hashchange event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oninput",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "input event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "oninvalid",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "invalid event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onkeydown",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "keydown event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onkeypress",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "keypress event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onkeyup",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "keyup event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onlanguagechange",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "languagechange event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onload",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "load event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onloadeddata",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "loadeddata event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onloadedmetadata",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "loadedmetadata event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onloadstart",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "loadstart event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onmessage",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "message event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onmessageerror",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "messageerror event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onmousedown",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "mousedown event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onmouseenter",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "mouseenter event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onmouseleave",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "mouseleave event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onmousemove",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "mousemove event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onmouseout",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "mouseout event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onmouseover",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "mouseover event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onmouseup",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "mouseup event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onoffline",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "offline event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ononline",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "online event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onpagehide",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "pagehide event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onpagereveal",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "pagereveal event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onpageshow",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "pageshow event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onpageswap",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "pageswap event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onpaste",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "paste event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onpause",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "pause event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onplay",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "play event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onplaying",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "playing event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onpopstate",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "popstate event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onprogress",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "progress event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onratechange",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "ratechange event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onreset",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "reset event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onresize",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "resize event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onrejectionhandled",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "rejectionhandled event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onscroll",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "scroll event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onscrollend",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "scrollend event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onsecuritypolicyviolation",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "securitypolicyviolation event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onseeked",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "seeked event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onseeking",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "seeking event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onselect",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "select event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onslotchange",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "slotchange event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onstalled",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "stalled event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onstorage",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "storage event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onsubmit",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "submit event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onsuspend",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "suspend event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ontimeupdate",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "timeupdate event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "ontoggle",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "toggle event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onunhandledrejection",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "unhandledrejection event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onunload",
+      "appliesTo": [
+        "body"
+      ],
+      "global": false,
+      "description": "unload event handler for Window object",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onvolumechange",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "volumechange event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onwaiting",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "waiting event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "onwheel",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "wheel event handler",
+      "value": "Event handler content attribute",
+      "url": "https://html.spec.whatwg.org/multipage/indices.html"
+    },
+    {
+      "name": "data-*",
+      "appliesTo": [
+        "HTML elements"
+      ],
+      "global": true,
+      "description": "Custom data attribute for storing private data or annotations specific to the page or application.",
+      "value": "Text",
+      "url": "https://html.spec.whatwg.org/multipage/dom.html#custom-data-attribute"
+    }
+  ],
+  "focus": {
+    "title": "6.6.3 The tabindex attribute",
+    "text": "The `tabindex`\ncontent attribute allows authors to make an element and regions that have the element as its\nDOM anchor be focusable areas, allow or prevent\nthem from being sequentially focusable, and determine their relative ordering for\nsequential focus navigation.\n\nThe name \"tab index\" comes from the common use of the `Tab` key to navigate through\nthe focusable elements. The term \"tabbing\" refers to moving forward through sequentially\nfocusable focusable areas.\n\nThe `tabindex` attribute, if specified, must have a value\nthat is a valid integer. Positive numbers specify the relative position of the\nelement's focusable areas in the sequential focus\nnavigation order, and negative numbers indicate that the control is not\nsequentially focusable.\n\nDevelopers should use caution when using values other than 0 or −1 for their `tabindex` attributes as this is complicated to do correctly.\n\nThe following provides a non-normative summary of the behaviors of the\npossible `tabindex` attribute values. The below\nprocessing model gives the more precise rules.\n\nomitted (or non-integer values)\nThe user agent will decide whether the element is focusable, and if it is,\nwhether it is sequentially focusable or click focusable (or both).\n−1 (or other negative integer values)\nCauses the element to be focusable, and indicates that the author would prefer\nthe element to be click focusable but not sequentially focusable. The\nuser agent might ignore this preference for click and sequential focusability, e.g., for\nspecific element types according to platform conventions, or for keyboard-only users.\n0\nCauses the element to be focusable, and indicates that the author would prefer\nthe element to be both click focusable and sequentially focusable. The\nuser agent might ignore this preference for click and sequential focusability.\npositive integer values\nBehaves the same as 0, but in addition creates a relative ordering within a\ntabindex-ordered focus navigation scope, so that elements with higher `tabindex` attribute value come later.\n\nNote that the `tabindex` attribute cannot be used to make\nan element non-focusable. The only way a page author can do that is by disabling the element, or making it\ninert.\n\nThe tabindex value of an element is the value of its `tabindex` attribute, parsed using the rules for parsing\nintegers. If parsing fails or the attribute is not specified, then the tabindex\nvalue is null.\n\nThe tabindex value of a focusable area is the tabindex\nvalue of its DOM anchor.\n\nThe tabindex value of an element must be interpreted as follows:\n\nIf the value is null\n\nThe user agent should follow platform conventions to determine if the element should be\nconsidered as a focusable area and if so, whether the element and any focusable areas that have the element as their\nDOM anchor are sequentially focusable, and if so, what their relative\nposition in their tabindex-ordered focus navigation scope is to be. If the element\nis a focus navigation scope owner, it must be included in its\ntabindex-ordered focus navigation scope even if it is not a focusable\narea.\n\nThe relative ordering within a tabindex-ordered focus navigation scope for\nelements and focusable areas that belong to the same\nfocus navigation scope and whose tabindex value is null should be in\nshadow-including tree order.\n\nModulo platform conventions, it is suggested that the following elements should be considered\nas focusable areas and be sequentially\nfocusable:\n\n- `a` elements that have an `href`\nattribute\n- `button` elements\n- `input` elements whose `type` attribute are\nnot in the Hidden state\n- `select` elements\n- `textarea` elements\n- `summary` elements that are the first `summary` element child of a\n`details` element\n- Elements with a `draggable` attribute set, if that would\nenable the user agent to allow the user to begin drag operations for those elements without\nthe use of a pointing device\n- Editing hosts\n- Navigable containers\n\nIf the value is a negative integer\n\nThe user agent must consider the element as a focusable area, but should omit\nthe element from any tabindex-ordered focus navigation scope.\n\nOne valid reason to ignore the requirement that sequential focus navigation not\nallow the author to lead to the element would be if the user's only mechanism for moving the\nfocus is sequential focus navigation. For instance, a keyboard-only user would be unable to\nclick on a text control with a negative `tabindex`, so that\nuser's user agent would be well justified in allowing the user to tab to the control\nregardless.\n\nIf the value is a zero\n\nThe user agent must allow the element to be considered as a focusable area and\nshould allow the element and any focusable areas that have\nthe element as their DOM anchor to be sequentially focusable.\n\nThe relative ordering within a tabindex-ordered focus navigation scope for\nelements and focusable areas that belong to the same\nfocus navigation scope and whose tabindex value is zero should be in\nshadow-including tree order.\n\nIf the value is greater than zero\n\nThe user agent must allow the element to be considered as a focusable area and\nshould allow the element and any focusable areas that have\nthe element as their DOM anchor to be sequentially focusable, and\nshould place the element — referenced as candidate below — and the\naforementioned focusable areas in the\ntabindex-ordered focus navigation scope where the element is a part of so that,\nrelative to other elements and focusable areas that belong\nto the same focus navigation scope, they are:\n\n- before any focusable area whose DOM anchor is an element whose `tabindex` attribute has been omitted or whose value, when parsed,\nreturns an error,\n- before any focusable area whose DOM anchor is an element whose `tabindex` attribute has a value less than or equal to zero,\n- after any focusable area whose DOM anchor is an element whose `tabindex` attribute has a value greater than zero but less than\nthe value of the `tabindex` attribute on candidate,\n- after any focusable area whose DOM anchor is an element whose `tabindex` attribute has a value equal to the value of the `tabindex` attribute on candidate but that is\nlocated earlier than candidate in shadow-including tree order,\n- before any focusable area whose DOM anchor is an element whose `tabindex` attribute has a value equal to the value of the `tabindex` attribute on candidate but that is\nlocated later than candidate in shadow-including tree order, and\n- before any focusable area whose DOM anchor is an element whose `tabindex` attribute has a value greater than the value of the\n`tabindex` attribute on candidate.\n\nThe `tabIndex`\ngetter steps are:\n\n-\nLet attribute be this's `tabindex` attribute.\n\n-\n\nIf attribute is not null:\n\n-\nLet parsedValue be the result of integer parsing attribute's value.\n\n-\nIf parsedValue is not an error and is within the `long` range, then return parsedValue.\n\n-\nReturn 0 if this is an `a`, `area`,\n`button`, `frame`, `iframe`, `input`,\n`object`, `select`, `textarea`, or SVG\n`a` element, or MathML `a` element, or is a\n`summary` element that is a summary for its parent details;\notherwise −1.\n\nThe varying default value based on element type is a historical artifact.",
+    "url": "https://html.spec.whatwg.org/multipage/interaction.html#the-tabindex-attribute"
+  }
+}

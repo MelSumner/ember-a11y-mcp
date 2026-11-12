@@ -11,7 +11,7 @@ const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 
 
 export function createServer() {
   const server = new McpServer({ name: 'ember-a11y-mcp', version: pkg.version }, {
-    instructions: 'Recommended first step in an Ember project: run audit_project_setup to check that a11y linting and testing are installed and configured, then audit templates with audit_ember_template. Use list_a11y_todos to find a11y violations hidden as lint todos. Before judging or changing a component, route or helper, call get_related_files to see what the code intends: its class and template, imports (utilities, helpers, shared abstractions), invoked components, styles, tests and where it is used. Use the lookup tools (WCAG, ARIA, APG, HDS examples) while building components.',
+    instructions: 'Recommended first step in an Ember project: run audit_project_setup to check that a11y linting and testing are installed and configured, then audit templates with audit_ember_template. Use list_a11y_todos to find a11y violations hidden as lint todos. Before judging or changing a component, route or helper, call get_related_files to see what the code intends: its class and template, imports (utilities, helpers, shared abstractions), invoked components, styles, tests and where it is used. Use the lookup tools (WCAG, ARIA, ARIA in HTML, HTML-AAM, HTML element definitions and attributes, APG, HDS examples) while building components.',
   });
   const text = (t) => ({ content: [{ type: 'text', text: t }] });
   const safe = (fn) => async (args) => {
@@ -43,6 +43,27 @@ export function createServer() {
     inputSchema: { element: z.string().describe('Tag, optionally with type, e.g. "input type=checkbox", "a", "section"') },
     annotations: readOnly,
   }, safe(tools.getHtmlElementRules));
+
+  server.registerTool('get_html_aam_mapping', {
+    title: 'Get HTML-AAM mapping',
+    description: 'Look up HTML Accessibility API Mappings 1.0 data for an HTML element, attribute, or accessible-name/description computation. Includes the WAI-ARIA and computed roles plus MSAA/IAccessible2, UIA, ATK and AX mappings where specified.',
+    inputSchema: {
+      query: z.string().describe('Element, attribute, or computation term, e.g. "button", "input type=checkbox", "checked", "button accessible name"'),
+      kind: z.enum(['element', 'attribute', 'computation', 'all']).optional().describe('Mapping category (default: element)'),
+      limit: z.number().int().min(1).max(20).optional(),
+    },
+    annotations: readOnly,
+  }, safe(tools.getHtmlAamMapping));
+
+  server.registerTool('get_html_element_info', {
+    title: 'Get HTML element details and valid attributes',
+    description: 'Look up a WHATWG HTML element: its description, categories, parent/content model, applicable global and element-specific HTML attributes, and HTML focus/tabindex rules. Pass `attribute` to check a specific attribute and get its value rules. The data is bundled locally; ARIA rules are in get_html_element_rules.',
+    inputSchema: {
+      element: z.string().describe('HTML tag, optionally with angle brackets, e.g. "dt", "input", "button"'),
+      attribute: z.string().optional().describe('Optional HTML content attribute to check, e.g. "autofocus", "href"'),
+    },
+    annotations: readOnly,
+  }, safe(tools.getHtmlElementInfo));
 
   server.registerTool('list_apg_patterns', {
     title: 'List APG patterns',
@@ -111,7 +132,7 @@ export function createServer() {
 
   server.registerTool('search_a11y_guidance', {
     title: 'Search accessibility guidance',
-    description: 'Full-text search across WCAG 2.2 criteria and techniques, ARIA 1.2 roles/attributes, ARIA in HTML, APG patterns and practices, Ember guidance, HDS Ember reference components and lint rules.',
+    description: 'Full-text search across WCAG 2.2 criteria and techniques, ARIA 1.2 roles/attributes, ARIA in HTML, WHATWG HTML element/attribute definitions, HTML-AAM element/attribute/API mappings and computations, APG patterns and practices, Ember guidance, HDS Ember reference components and lint rules.',
     inputSchema: { query: z.string(), limit: z.number().int().min(1).max(50).optional() },
     annotations: readOnly,
   }, safe(tools.searchGuidance));

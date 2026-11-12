@@ -3,6 +3,8 @@ import { describe, expect, it } from 'vitest';
 
 const load = (n) => JSON.parse(readFileSync(new URL(`../data/${n}.json`, import.meta.url), 'utf8'));
 const aria = load('aria');
+const htmlStandard = load('html-standard');
+const htmlAam = load('html-aam');
 const htmlAria = load('html-aria');
 const role = (r) => aria.roles[r];
 const el = (id) => htmlAria.elements.find((e) => e.id === id);
@@ -72,6 +74,23 @@ describe('data/aria.json (WAI-ARIA 1.2 REC + DPUB 1.1 + Graphics 1.0)', () => {
 });
 
 describe('data/html-aria.json (ARIA in HTML)', () => {
+
+  describe('data/html-aam.json (HTML Accessibility API Mappings)', () => {
+    it('records its pinned W3C source and extracts element, attribute, and name data', () => {
+      expect(htmlAam.source.version).toBe('1.0');
+      expect(htmlAam.source.status).toBe('W3C Working Draft');
+      expect(htmlAam.source.commit).toMatch(/^[0-9a-f]{40}$/);
+      expect(htmlAam.elementMappings.length).toBeGreaterThan(140);
+      expect(htmlAam.attributeMappings.length).toBeGreaterThan(150);
+      expect(htmlAam.nameComputations.length).toBeGreaterThan(15);
+      expect(htmlAam.elementMappings.find((entry) => entry.name === 'button').rows).toEqual(
+        expect.arrayContaining([expect.objectContaining({ label: 'wai-aria-1.2', value: '`button` role' })]),
+      );
+      expect(htmlAam.attributeMappings.find((entry) => entry.name === 'checked').rows).toEqual(
+        expect.arrayContaining([expect.objectContaining({ label: 'WAI-ARIA-1.2', value: '`aria-checked`="true"' })]),
+      );
+    });
+  });
   it('has rows for every element with source metadata', () => {
     expect(htmlAria.source.commit).toMatch(/^[0-9a-f]{40}$/);
     expect(htmlAria.elements.length).toBeGreaterThan(120);
@@ -89,5 +108,27 @@ describe('data/html-aria.json (ARIA in HTML)', () => {
   it('captures aria policies', () => {
     expect(el('el-br').ariaPolicy).not.toBe('global-and-role');
     expect(el('el-button').ariaPolicy).toBe('global-and-role');
+  });
+});
+
+describe('data/html-standard.json (WHATWG HTML Living Standard)', () => {
+  it('records source digests and extracts element and content-attribute indexes', () => {
+    expect(htmlStandard.source.lastUpdated).toMatch(/^\d{1,2} \w+ \d{4}$/);
+    expect(htmlStandard.source.indexDigest).toMatch(/^[0-9a-f]{64}$/);
+    expect(htmlStandard.source.focusDigest).toMatch(/^[0-9a-f]{64}$/);
+    expect(htmlStandard.elements.length).toBeGreaterThan(100);
+    expect(htmlStandard.attributes.length).toBeGreaterThan(250);
+    expect(htmlStandard.attributes).toEqual(expect.arrayContaining([expect.objectContaining({ name: 'data-*', global: true })]));
+    expect(htmlStandard.elements.find((entry) => entry.tags.includes('dt'))).toMatchObject({
+      attributes: ['globals'],
+      url: expect.stringContaining('#the-dt-element'),
+    });
+    expect(htmlStandard.attributes).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ name: 'autofocus', global: true }),
+        expect.objectContaining({ name: 'onfocus', global: true }),
+      ]),
+    );
+    expect(htmlStandard.focus.text).toMatch(/negative integer[\s\S]*focusable/i);
   });
 });
