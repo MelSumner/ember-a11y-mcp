@@ -16,22 +16,11 @@ Runtime lookups run locally and offline. The guidance is pre-extracted from WCAG
 ### 1. Check the prerequisites
 
 - Node.js 22 or later (`node --version`).
-- pnpm. If you don't have it, run `corepack enable` (bundled with Node 22 and 24) or `npm install -g pnpm`.
+- npm (included with Node.js); pnpm is optional for the project-install step below.
 
-ember-a11y-mcp isn't published to npm yet, so you run it from a clone.
+### 2. Connect it to your agent
 
-### 2. Clone and install
-
-```sh
-git clone https://github.com/MelSumner/ember-a11y-mcp.git
-cd ember-a11y-mcp
-pnpm install
-pwd    # note this path; the next steps call it /path/to/ember-a11y-mcp
-```
-
-### 3. Connect it to your agent
-
-Point the server at `index.js` in your clone. `EMBER_A11Y_ROOT` is the Ember app (or monorepo) it may read; it can't read files outside it. If you leave it out, the server uses its working directory.
+The MCP runs through `npx`; no repository clone or project dependency is required. Set `EMBER_A11Y_ROOT` to the Ember app (or monorepo) it may read. It can't read files outside that directory. If omitted, the server uses its working directory.
 
 **VS Code (GitHub Copilot):** create `.vscode/mcp.json` in your Ember app:
 
@@ -39,8 +28,8 @@ Point the server at `index.js` in your clone. `EMBER_A11Y_ROOT` is the Ember app
 {
   "servers": {
     "ember-a11y": {
-      "command": "node",
-      "args": ["/path/to/ember-a11y-mcp/index.js"],
+      "command": "npx",
+      "args": ["--yes", "--package=ember-a11y-mcp", "ember-a11y-mcp"],
       "env": { "EMBER_A11Y_ROOT": "${workspaceFolder}" }
     }
   }
@@ -54,8 +43,8 @@ Point the server at `index.js` in your clone. `EMBER_A11Y_ROOT` is the Ember app
   "mcpServers": {
     "ember-a11y": {
       "type": "local",
-      "command": "node",
-      "args": ["/path/to/ember-a11y-mcp/index.js"],
+      "command": "npx",
+      "args": ["--yes", "--package=ember-a11y-mcp", "ember-a11y-mcp"],
       "env": { "EMBER_A11Y_ROOT": "/path/to/your-ember-app" },
       "tools": ["*"]
     }
@@ -65,7 +54,7 @@ Point the server at `index.js` in your clone. `EMBER_A11Y_ROOT` is the Ember app
 
 **Other MCP clients** (Claude Desktop, Claude Code, Cursor and so on): use the same `command`, `args` and `env` in that client's MCP configuration. Most use an `mcpServers` object.
 
-### 4. Try it
+### 3. Try it
 
 Open your Ember app and ask your agent, for example:
 
@@ -76,21 +65,25 @@ Open your Ember app and ask your agent, for example:
 
 To confirm it's connected, check that the agent's reply comes from an `ember-a11y` tool call. Many clients can also invoke the `check_a11y_setup` prompt directly.
 
-### 5. Optional: add it to your app
+### 4. Optional: add it to your app
 
-To run the linter from your app's scripts, or to use the [focus visibility test helper](#focus-visibility-test-helper), install your clone as a devDependency:
+Install the package as a devDependency to run the linter from your app's scripts or use the [focus visibility test helper](#focus-visibility-test-helper):
 
 ```sh
-cd /path/to/your-ember-app
-pnpm add -D /path/to/ember-a11y-mcp
+pnpm add -D ember-a11y-mcp
 pnpm exec ember-a11y-lint app
 ```
 
-Without installing, you can run it directly: `node /path/to/ember-a11y-mcp/bin/ember-a11y-lint.js app`.
+With npm:
+
+```sh
+npm install --save-dev ember-a11y-mcp
+npx ember-a11y-lint app
+```
 
 ## Using the CLI linter
 
-Run it from your app's root (the examples assume step 5; otherwise replace `pnpm exec ember-a11y-lint` with `node /path/to/ember-a11y-mcp/bin/ember-a11y-lint.js`):
+Run it from your app's root after step 4. Without installing the package, run it with `npx --yes --package=ember-a11y-mcp ember-a11y-lint app`.
 
 ```sh
 pnpm exec ember-a11y-lint app/components            # errors and warnings, human-readable
@@ -143,7 +136,7 @@ test('settings page shows focus', async function (assert) {
 
 Changes to only color, background color, weight, opacity, transform or filter are returned as `warnings`, because they need a 3:1 contrast check (1.4.11). Pass `strict: true` to make them fail. Elements that disappear while the audit runs, such as a menu that closes on `focusout`, are skipped as they would be with Tab. iframes are left out, so audit their content separately. Lower-level functions are `auditFocusVisible` (returns `results`, `skipped`, `failures` and `warnings`), `focusIndicator` and `tabbableElements`.
 
-It can't measure contrast or size, as a screenshot comparison could, and it can't see indicators drawn on unrelated elements, so a person should still check a sample with the keyboard. Ember apps import it through ember-auto-import or Embroider, with `ember-a11y-mcp` installed as a devDependency ([step 5](#5-optional-add-it-to-your-app)).
+It can't measure contrast or size, as a screenshot comparison could, and it can't see indicators drawn on unrelated elements, so a person should still check a sample with the keyboard. Ember apps import it through ember-auto-import or Embroider, with `ember-a11y-mcp` installed as a devDependency ([step 4](#4-optional-add-it-to-your-app)).
 
 ## Reference
 
@@ -182,7 +175,7 @@ The server also provides the resource `ember-a11y://guide` (Ember accessibility 
 - Each route in `app/router` is visited by an acceptance test that runs axe, including the routes of mounted Ember engines (`this.mount`, read from the engine's `addon/routes.js`). See [route coverage](#route-coverage) below.
 - A package.json script runs `ember-template-lint` (and, optionally, `ember-a11y-lint`).
 
-Each check is pass, warn, fail or info, with a fix. Results are also returned as `structuredContent`. Lists longer than 25 entries end with "…and N more", and the check's `count` has the full number. Next steps use paths relative to the server root and the package's source directory (`app`, `src` for v2 addons, or `addon`). Until ember-a11y-mcp is on npm, the `ember-a11y-lint` step points at this clone's `bin/ember-a11y-lint.js`. HTML Validate checks are left out for now.
+Each check is pass, warn, fail or info, with a fix. Results are also returned as `structuredContent`. Lists longer than 25 entries end with "…and N more", and the check's `count` has the full number. Next steps use paths relative to the server root and the package's source directory (`app`, `src` for v2 addons, or `addon`). The `ember-a11y-lint` step uses the installed package's `bin/ember-a11y-lint.js`. HTML Validate checks are left out for now.
 
 **Monorepos and addons:**
 
