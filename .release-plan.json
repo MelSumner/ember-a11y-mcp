@@ -1,0 +1,18 @@
+{
+  "solution": {
+    "ember-a11y-mcp": {
+      "impact": "patch",
+      "oldVersion": "0.1.0",
+      "newVersion": "0.1.1",
+      "tagName": "latest",
+      "constraints": [
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
+        }
+      ],
+      "pkgJSONPath": "./package.json"
+    }
+  },
+  "description": "## Release (2026-11-18)\n\n* ember-a11y-mcp 0.1.1 (patch)\n\n#### :house: Internal\n* `ember-a11y-mcp`\n  * [#3](https://github.com/MelSumner/ember-a11y-mcp/pull/3) fix repo link ([@mansona](https://github.com/mansona))\n  * [#1](https://github.com/MelSumner/ember-a11y-mcp/pull/1) start using release-plan ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+}
