@@ -214,6 +214,7 @@ export function createServer() {
     title: 'Generate Ember accessibility tests',
     description:
       'Scaffold a QUnit rendering test (.gjs) for a component implementing an APG pattern: axe audit via ember-a11y-testing, APG role/state/name checks and one keyboard test per APG key. ' +
+      'The axe audit includes partial rendered text contrast coverage (WCAG 1.4.3). ' +
       'The checks accept every conformant variant: native elements or explicit roles (<button> or role="button"), ARIA states or native equivalents (checked, disabled, details[open], dialog:modal), any accessible-name source, and roles APG makes optional or alternative.',
     inputSchema: {
       pattern: z.string().optional().describe('APG pattern id, e.g. "tabs"'),
