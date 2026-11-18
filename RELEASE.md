@@ -27,3 +27,5 @@ When reviewing merged PR's the labels to be used are:
 Once the prep work is completed, the actual release is straight forward: you just need to merge the open [Plan Release](https://github.com/mansona/ember-a11y-mcp/pulls?q=is%3Apr+is%3Aopen+%22Prepare+Release%22+in%3Atitle) PR
 
 For npm provenance verification, keep `repository.url` in [package.json](./package.json) set to the canonical GitHub HTTPS URL, including the exact owner casing. If npm rejects the upload with a repository mismatch, merge the metadata fix and run **Publish Stable** from `main`.
+
+[CI](./.github/workflows/ci.yml) skips test execution on the release PR and on the push to `main` when the diff includes `.release-plan.json` and changes nothing other than that file, the changelog, or the package version. Any other change, including dependencies or other package metadata, runs the full suite. **Run workflow** in GitHub Actions also runs the full suite. Publishing is unchanged.
