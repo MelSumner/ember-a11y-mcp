@@ -246,6 +246,36 @@ describe('engine', () => {
     expect(lint('<Foo as |f|><:header>x</:header></Foo>').filter((f) => f.severity !== 'info')).toHaveLength(0);
   });
 
+  test('nested-interactive checks the named yield and the custom Link implementation', () => {
+    const root = mkdtempSync(join(tmpdir(), 'named-block-'));
+    try {
+      mkdirSync(join(root, 'app/components'), { recursive: true });
+      writeFileSync(join(root, 'package.json'), '{"name":"example-app"}');
+      const file = (name) => join(root, 'app/components', name);
+      writeFileSync(file('example.hbs'), '<CardButton><:editLink><Link /></:editLink></CardButton>');
+      const run = (filename = 'example.hbs') => lintFiles([file(filename)], { root })[0].findings
+        .filter((f) => f.ruleId === 'no-nested-interactive');
+
+      expect(run()).toMatchObject([{ severity: 'info', message: expect.stringContaining('<:editLink>') }]);
+
+      writeFileSync(file('card-button.hbs'), '<button>Open</button>{{yield to="editLink"}}');
+      writeFileSync(file('link.hbs'), '<a href="/edit">Edit</a>');
+      expect(run()).toEqual([]);
+
+      writeFileSync(file('card-button.hbs'), '<button>{{yield to="editLink"}}</button>');
+      expect(run()).toMatchObject([{ severity: 'error', message: expect.stringContaining('app/components/card-button.hbs') }]);
+
+      writeFileSync(file('link.hbs'), '<span>{{yield}}</span>');
+      expect(run()).toEqual([]);
+
+      writeFileSync(file('example.gjs'), `import Card from './card-button.hbs';\nimport Link from './action.gjs';\n<template><Card><:editLink><Link /></:editLink></Card></template>`);
+      writeFileSync(file('action.gjs'), '<template><a href="/edit">Edit</a></template>');
+      expect(run('example.gjs')).toMatchObject([{ severity: 'error', message: expect.stringContaining('app/components/action.gjs') }]);
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
+  });
+
   test('file walk skips dangling links, loops and links outside the walked path', () => {
     const dir = mkdtempSync(join(tmpdir(), 'walk-'));
     try {

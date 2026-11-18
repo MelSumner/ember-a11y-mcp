@@ -238,6 +238,7 @@ Links (`<a href>`, `<LinkTo>`) to a confirmation page are never flagged. Handler
 
 - The MCP template audit and CLI linter don't measure rendered color contrast. The tests scaffolded by `generate_ember_a11y_tests` already call `a11yAudit()` from `ember-a11y-testing`, which uses axe to catch some text contrast failures (WCAG 1.4.3). Run the audit in a browser with your app's styles loaded for each relevant theme and interaction state. Manually check cases axe can't reliably assess, such as text over images or gradients, and non-text contrast such as focus indicators (WCAG 1.4.11).
 - Focus visibility, reflow, motion, timing and content quality cannot be checked from templates. For focus visibility, use the [test helper](#focus-visibility-test-helper). `get_wcag_criterion` lists manual verification steps.
+- For `no-nested-interactive` in Ember named blocks (such as `<:editLink>`), audit the template by path so the linter can resolve local component templates and check where `{{yield to="editLink"}}` renders. A possible nesting it cannot verify (for example, with an external component or a dynamic yield) is reported as informational; verify it in the rendered DOM.
 - HDS code is a reference for patterns. Prefer your own design system's components where they exist.
 
 ## Contributing
