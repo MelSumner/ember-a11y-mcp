@@ -2,11 +2,24 @@
   "name": "ember-a11y-mcp",
   "version": "0.1.0",
   "description": "MCP server and template linter that guides Ember.js developers to accessible outcomes using WCAG 2.2, WAI-ARIA 1.2, the WHATWG HTML Standard, HTML-AAM, ARIA in HTML, the ARIA Authoring Practices Guide and HDS Ember reference components.",
+  "keywords": [
+    "ember",
+    "accessibility",
+    "a11y",
+    "aria",
+    "wcag",
+    "mcp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mansona/ember-a11y-mcp.git"
+  },
+  "license": "MIT",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "ember-a11y-mcp": "./index.js",
-    "ember-a11y-lint": "./bin/ember-a11y-lint.js"
+    "ember-a11y-lint": "./bin/ember-a11y-lint.js",
+    "ember-a11y-mcp": "./index.js"
   },
   "files": [
     "index.js",
@@ -18,31 +31,18 @@
     "NOTICE.md",
     "README.md"
   ],
-  "engines": {
-    "node": ">=22"
-  },
   "scripts": {
-    "start": "node index.js",
     "build:data": "node scripts/build-data/index.js",
+    "clone-sources": "node scripts/clone-sources.js",
     "lint:templates": "node bin/ember-a11y-lint.js",
+    "start": "node index.js",
     "test": "vitest run",
-    "test:watch": "vitest",
     "test:coverage": "vitest run --coverage --coverage.include='lib/**' --coverage.include=index.js",
-    "test:mutation": "stryker run",
     "test:e2e": "vitest run --config vitest.e2e.config.js",
     "test:e2e:hds": "vitest run --config vitest.e2e.config.js test/e2e/hds-showcase.test.js",
-    "clone-sources": "node scripts/clone-sources.js"
+    "test:mutation": "stryker run",
+    "test:watch": "vitest"
   },
-  "keywords": [
-    "ember",
-    "accessibility",
-    "a11y",
-    "aria",
-    "wcag",
-    "mcp"
-  ],
-  "license": "MIT",
-  "packageManager": "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800",
   "dependencies": {
     "@glimmer/syntax": "^0.97.0",
     "@modelcontextprotocol/sdk": "^1.32.2",
@@ -55,6 +55,11 @@
     "@vitest/coverage-v8": "5.0.5",
     "cheerio": "^1.2.0",
     "playwright-core": "^1.64.1",
+    "release-plan": "^0.18.0",
     "vitest": "^5.0.5"
+  },
+  "packageManager": "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800",
+  "engines": {
+    "node": ">=22"
   }
 }
