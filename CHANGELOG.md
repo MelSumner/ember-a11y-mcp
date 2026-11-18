@@ -2,6 +2,17 @@
 
 ## Release (2026-11-18)
 
+* ember-a11y-mcp 0.1.2 (patch)
+
+#### :house: Internal
+* `ember-a11y-mcp`
+  * [#4](https://github.com/MelSumner/ember-a11y-mcp/pull/4) Fix repository URL casing in package.json ([@MelSumner](https://github.com/MelSumner))
+
+#### Committers: 1
+- Melanie Sumner Temple ([@MelSumner](https://github.com/MelSumner))
+
+## Release (2026-11-18)
+
 * ember-a11y-mcp 0.1.1 (patch)
 
 #### :house: Internal
