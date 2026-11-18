@@ -236,7 +236,8 @@ Links (`<a href>`, `<LinkTo>`) to a confirmation page are never flagged. Handler
 
 ## Limitations
 
-- Color contrast, focus visibility, reflow, motion, timing and content quality cannot be checked from templates (for focus visibility, use the [test helper](#focus-visibility-test-helper)). `get_wcag_criterion` lists the manual steps for each criterion.
+- The MCP template audit and CLI linter don't measure rendered color contrast. The tests scaffolded by `generate_ember_a11y_tests` already call `a11yAudit()` from `ember-a11y-testing`, which uses axe to catch some text contrast failures (WCAG 1.4.3). Run the audit in a browser with your app's styles loaded for each relevant theme and interaction state. Manually check cases axe can't reliably assess, such as text over images or gradients, and non-text contrast such as focus indicators (WCAG 1.4.11).
+- Focus visibility, reflow, motion, timing and content quality cannot be checked from templates. For focus visibility, use the [test helper](#focus-visibility-test-helper). `get_wcag_criterion` lists manual verification steps.
 - HDS code is a reference for patterns. Prefer your own design system's components where they exist.
 
 ## Contributing

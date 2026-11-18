@@ -146,7 +146,8 @@ describe('generateEmberA11yTests', () => {
     for (const { id } of apg().patterns) {
       const out = generateEmberA11yTests({ pattern: id });
       const code = out.match(/```(?:gjs|js)\n([\s\S]*?)```/)?.[1] ?? out;
-      expect(code).toMatch(/a11yAudit/);
+      expect(code).toContain('await a11yAudit();');
+      expect(code).toContain('color-contrast');
       expect(() => p.process(code)).not.toThrow();
     }
   });
