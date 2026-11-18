@@ -132,6 +132,13 @@ const FIXES = {
   'el-tr': { rolePolicy: 'list', allowedRoles: [], notRecommendedRoles: ['row'], contextFallbackPolicy: 'any' },
   'el-figure': { contextFallbackPolicy: 'any', notes: ['With a figcaption descendant only figure (NOT RECOMMENDED) or doc-example are allowed.'] },
   'el-div': { contextFallbackPolicy: 'any', notes: ['As a direct child of dl only presentation/none are allowed.'] },
+  'el-dt': {
+    notes: [
+      'HTML-AAM maps `<dt>` to the `term` role, which supports author-provided names; accordingly, `aria-label` is allowed. ARIA in HTML separately lists no corresponding role and allows `listitem` as an explicit role. See [HTML-AAM](https://www.w3.org/TR/html-aam-1.0/#el-dt) and [WAI-ARIA `term`](https://www.w3.org/TR/wai-aria-1.2/#term).',
+      'With `tabindex="-1"`, `<dt>` can receive programmatic focus but is normally skipped in sequential Tab navigation. See [WHATWG HTML](https://html.spec.whatwg.org/multipage/interaction.html#the-tabindex-attribute).',
+      'When the visible text already provides the intended name, prefer it or `aria-labelledby`; `aria-label` overrides the name from content.',
+    ],
+  },
   'el-label': { contextFallbackPolicy: 'any' },
   'el-summary': { contextFallbackPolicy: 'any' },
   'el-selectedcontent': { contextFallbackPolicy: 'any' },

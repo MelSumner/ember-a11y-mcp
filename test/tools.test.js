@@ -18,6 +18,15 @@ describe('spec lookups', () => {
     expect(getHtmlElementRules({ element: 'button' })).toMatch(/button/);
   });
 
+  test('dt lookup includes cross-spec role, naming and focus guidance', () => {
+    const result = getHtmlElementRules({ element: 'dt' });
+    expect(result).toMatch(/Allowed roles:\*\* listitem/);
+    expect(result).toContain('HTML-AAM maps `<dt>` to the `term` role');
+    expect(result).toContain('`aria-label` is allowed');
+    expect(result).toContain('programmatic focus');
+    expect(result).toContain('sequential Tab navigation');
+  });
+
   test('HTML-AAM lookups include element, attribute and name-computation mappings', () => {
     expect(getHtmlAamMapping({ query: 'button' })).toMatch(/button.*role/s);
     expect(getHtmlAamMapping({ query: 'checked', kind: 'attribute' })).toMatch(/aria-checked.*true/s);
@@ -26,9 +35,14 @@ describe('spec lookups', () => {
 
   test('HTML Standard lookup answers dt focus and attribute questions locally', () => {
     const info = getHtmlElementInfo({ element: 'dt' });
+    expect(info.length).toBeLessThan(2500);
     expect(info).toMatch(/<dt>/);
     expect(info).toMatch(/tabindex/);
     expect(info).toMatch(/platform conventions/);
+    expect(info).toMatch(/Global HTML attributes:\*\* \d+ apply/);
+    expect(info).not.toContain('accesskey, autocapitalize');
+    expect(getHtmlElementInfo({ element: 'dt', includeGlobalAttributes: true })).toContain('accesskey');
+    expect(getHtmlElementInfo({ element: 'dt', includeFocusDetails: true }).length).toBeGreaterThan(info.length + 5000);
     expect(getHtmlElementInfo({ element: 'dt', attribute: 'autofocus' })).toMatch(/valid HTML attribute/);
     expect(getHtmlElementInfo({ element: 'dt', attribute: 'href' })).toMatch(/No: `href`/);
   });

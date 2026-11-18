@@ -57,10 +57,12 @@ export function createServer() {
 
   server.registerTool('get_html_element_info', {
     title: 'Get HTML element details and valid attributes',
-    description: 'Look up a WHATWG HTML element: its description, categories, parent/content model, applicable global and element-specific HTML attributes, and HTML focus/tabindex rules. Pass `attribute` to check a specific attribute and get its value rules. The data is bundled locally; ARIA rules are in get_html_element_rules.',
+    description: 'Look up a WHATWG HTML element: its description, categories, parent/content model, element-specific attributes, and a concise focus/tabindex summary. Pass `attribute` to check a specific attribute. Set `includeGlobalAttributes` or `includeFocusDetails` only when you need the full lists/rules. The data is bundled locally; ARIA rules are in get_html_element_rules.',
     inputSchema: {
       element: z.string().describe('HTML tag, optionally with angle brackets, e.g. "dt", "input", "button"'),
       attribute: z.string().optional().describe('Optional HTML content attribute to check, e.g. "autofocus", "href"'),
+      includeGlobalAttributes: z.boolean().optional().describe('Include the full global-attribute name list (default false; global attributes still apply)'),
+      includeFocusDetails: z.boolean().optional().describe('Include the full tabindex focus section (default false; a concise summary is always returned)'),
     },
     annotations: readOnly,
   }, safe(tools.getHtmlElementInfo));
