@@ -1,6 +1,6 @@
 {
   "name": "ember-a11y-mcp",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "MCP server and template linter that guides Ember.js developers to accessible outcomes using WCAG 2.2, WAI-ARIA 1.2, the WHATWG HTML Standard, HTML-AAM, ARIA in HTML, the ARIA Authoring Practices Guide and HDS Ember reference components.",
   "keywords": [
     "ember",

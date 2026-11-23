@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2026-11-23)
+
+* ember-a11y-mcp 0.1.5 (patch)
+
+#### :bug: Bug Fix
+* `ember-a11y-mcp`
+  * [#12](https://github.com/MelSumner/ember-a11y-mcp/pull/12) Keep regex literals intact when stripping JS comments ([@MelSumner](https://github.com/MelSumner))
+
+#### Committers: 1
+- Melanie Sumner Temple ([@MelSumner](https://github.com/MelSumner))
+
 ## Release (2026-11-18)
 
 * ember-a11y-mcp 0.1.4 (patch)
